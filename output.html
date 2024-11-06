@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Digitale Soziale Arbeit</title>
+    <!-- SEO Meta Tags -->
+    <meta content="Digitale Soziale Arbeit" name="description" />
+    <meta content="Digitale Soziale Arbeit" name="keywords" />
+    <meta content="Digital Humanities Craft" name="author" />
+    <meta content="Susanne Sackl-Sharif" name="author" />
+    <!-- Open Graph -->
+    <meta content="Digitale Soziale Arbeit" property="og:title" />
+    <meta content="Digitale Soziale Arbeit" property="og:description" />
+    <meta content="Digitale Soziale Arbeit" property="og:image" />
+    <meta content="Digitale Soziale Arbeit" property="og:url" />
+    <!-- Twitter Card -->
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Digitale Soziale Arbeit" name="twitter:title" />
+    <meta content="Digitale Soziale Arbeit" name="twitter:description" />
+    <meta content="Digitale Soziale Arbeit" name="twitter:image" />
+    <!-- Viewport -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+    <!-- Favicon and Touch Icons -->
+    <link href="assets/favicon/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="assets/favicon/favicon.png" rel="icon" type="image/png" />
+    <!-- Vendor Styles -->
+    <link
+      href="assets/vendor/boxicons/css/boxicons.min.css"
+      media="screen"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"
+      media="screen"
+      rel="stylesheet"
+    />
+    <!-- Main Theme Styles + Bootstrap -->
+    <link href="assets/css/theme.min.css" media="screen" rel="stylesheet" />
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: 0.6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+  <!-- Body -->
+  <body>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
+        <div class="container px-3">
+          <a class="navbar-brand pe-3" href="/" title="Home"
+            ><i class="bx bx-home-alt"></i
+          ></a>
+          <div class="offcanvas offcanvas-end" id="navbarNav">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                type="button"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Team & Projects -->
+                <li class="nav-item dropdown">
+                  <a
+                    aria-expanded="false"
+                    class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    href="#"
+                    id="teamProjectsDropdown"
+                    role="button"
+                  >
+                    Team &amp; Projekte
+                  </a>
+                  <ul
+                    aria-labelledby="teamProjectsDropdown"
+                    class="dropdown-menu"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="/digi-sowi">digi@socialwork</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/digi-youthwork"
+                        >digi@youthwork</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/ai-youthwork"
+                        >ai@youthwork</a
+                      >
+                    </li>
+                    <li><a class="dropdown-item" href="/team">Team</a></li>
+                  </ul>
+                </li>
+                <!-- Presentations & Publications -->
+                <li class="nav-item">
+                  <a class="nav-link" href="/presentations-publications"
+                    >Vorträge &amp; Publikationen</a
+                  >
+                </li>
+                <!-- Podcasts & Medienberichte -->
+                <li class="nav-item">
+                  <a class="nav-link" href="/podcasts-media"
+                    >Podcasts &amp; Medienberichte</a
+                  >
+                </li>
+                <!-- Products or Recommendations -->
+                <li class="nav-item dropdown">
+                  <a
+                    aria-expanded="false"
+                    class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    href="#"
+                    id="productsDropdown"
+                    role="button"
+                  >
+                    Empfehlungen für die Praxis
+                  </a>
+                  <ul aria-labelledby="productsDropdown" class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="/future-scenarios"
+                        >Zukunftsszenarien</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/recommendations"
+                        >Handlungsempfehlungen: Digitalisierung in der Sozialen
+                        Arbeit</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/resistance-postcards"
+                        >Postkarten: Umgang mit Widerstand gegenüber
+                        Digitalisierung</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/curriculum">Curriculum</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4"
+            data-bs-toggle="mode"
+          >
+            <input class="form-check-input" id="theme-mode" type="checkbox" />
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"
+              >Light</label
+            >
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"
+              >Dark</label
+            >
+          </div>
+          <button
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-bs-target="#navbarNav"
+            data-bs-toggle="offcanvas"
+            type="button"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+      <section class="container mb-5 pt-4 pb-2 py-mg-4">
+        <div class="row">
+          <div class="col-lg-9">
+            <h1 class="h2 mb-4">Publikationen &amp; Vorträge</h1>
+            <!-- Publications Section -->
+            <div class="mb-5 publications">
+              <h2 class="h4 mb-4" id="publications">
+                <i class="bx bx-book-open me-2 text-primary"></i>
+                Publikationen
+              </h2>
+              <div class="card border-0 shadow-sm mb-4" id="publications-2025">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Ortsunabhängiges und zeitflexibles Arbeiten (2025)
+                  </h3>
+                  <p class="mb-3">
+                    Klinger, S., Sackl-Sharif, S. &amp; Mayr, A. Die
+                    digitalisierte Soziale Arbeit im Spannungsfeld von
+                    organisationalen Rahmenbedingungen und individuellen
+                    Strategien. In: Opielka, M. &amp; Erfurth, C. (Hrsg.):
+                    <i
+                      >Soziale Digitalisierung. Perspektiven zu den
+                      Schnittstellen von Technik und Gesellschaft, Perspektiven
+                      der Sozialpolitik</i
+                    >. VS Springer, S. XX–YY.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="publications-2024">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Künstliche Intelligenz in der Sozialen Arbeit (2024)
+                  </h3>
+                  <p class="mb-3">
+                    Klinger, S. &amp; Sackl-Sharif, S. Vom verantwortungsvollen
+                    Umgang mit Künstlicher Intelligenz in der Sozialen Arbeit.
+                    In: <i>Sozialpädagogische Impulse</i>, 4/2024, S. XX–YY.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digital Divide und digitaler Raum (2024)
+                  </h3>
+                  <p class="mb-3">
+                    Sackl-Sharif, S., Mayr, A. &amp; Klinger, S. Zwischen
+                    Digital Divide und kreativ-transformativer Gestaltung des
+                    digitalen Raums. Zur Arbeit mit Adressat:innen in der
+                    digitalisierten Sozialen Arbeit. In: Lauermann, K., More,
+                    R., Sigot, M. &amp; Sting, S. (Hrsg.):
+                    <i
+                      >Soziale Arbeit zwischen Inklusion und Exklusion.
+                      Perspektiven aus Forschung und Praxis</i
+                    >. Barbara Budrich, S. 142–152.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Online-Ideenlabs und Handlungsempfehlungen (2024)
+                  </h3>
+                  <p class="mb-3">
+                    Mayr, A., Sackl-Sharif, S. &amp; Klinger, S.
+                    Spannungsdynamiken und Lösungsansätze partizipativ
+                    verhandeln. Über die Arbeit mit Online-Ideenlabs zur
+                    Entwicklung von Handlungsempfehlungen für die Gestaltung von
+                    Digitalisierungsprozessen in Organisationen der Sozialen
+                    Arbeit. In: Degel, A. &amp; Liebsch, K. (Hrsg.):
+                    <i
+                      >Digitalität und Ambiguität. Organisationskulturen der
+                      Sozialen Arbeit unter Druck</i
+                    >. Beltz Juventa, S. 168–193.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="publications-2023">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digital Literacies in der Sozialen Arbeit (2023)
+                  </h3>
+                  <p class="mb-3">
+                    Sackl-Sharif, S., Klinger, S., Mayr, A. &amp;
+                    Brossmann-Handler, E. Aneignungsmöglichkeiten von Digital
+                    Literacies im Feld der Sozialen Arbeit. Perspektiven von
+                    Fachkräften und Handlungsempfehlungen für Organisationen.
+                    In: <i>Der pädagogische Blick</i>, 31(4), S. 238–248.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digitale Technologie in der Sozialen Arbeit (2023)
+                  </h3>
+                  <p class="mb-3">
+                    Klinger, S., Mayr, A., Sackl-Sharif, S. &amp;
+                    Brossmann-Handler, E. Zur (nicht) selbstverständlichen
+                    Nutzung digitaler Technologie in der Sozialen Arbeit.
+                    Ergebnisse einer österreichweiten Befragung von Fachkräften.
+                    In:
+                    <i
+                      >Soziale Arbeit. Zeitschrift für soziale und
+                      sozialverwandte Gebiete</i
+                    >, 72(6), S. 202–211.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="publications-2022">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Handlungspraxis in der Sozialen Arbeit (2022)
+                  </h3>
+                  <p class="mb-3">
+                    Klinger, S., Mayr, A. &amp; Sackl-Sharif, S. Digitalisierung
+                    der Handlungspraxis in der Sozialen Arbeit. Kontrastierungen
+                    nach Angebotsstrukturen und Zielgruppen [69 Absätze].
+                    <i
+                      >Forum Qualitative Sozialforschung / Forum: Qualitative
+                      Social Research</i
+                    >, 23(2), Art. 14.
+                  </p>
+                  <a
+                    class="btn btn-sm btn-outline-primary"
+                    href="https://doi.org/10.17169/fqs-22.2.3851"
+                    target="_blank"
+                  >
+                    <i class="bx bx-link-external me-2"></i>
+                    Zum Artikel
+                  </a>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Digitalisation at workplaces (2022)</h3>
+                  <p class="mb-3">
+                    Klinger, S., Rauter, R. &amp; Sackl-Sharif, S. Challenges,
+                    contextual factors and innovation potentials. In: Hummel, S.
+                    et al. (Hrsg.):
+                    <i
+                      >Shaping tomorrow today. SDGs from multiple
+                      perspectives</i
+                    >. Springer VS. S. 327–354.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Participatory online idea labs (2022)</h3>
+                  <p class="mb-3">
+                    Sackl-Sharif, S., Klinger, S., Mayr, A. &amp;
+                    Brossmann-Handler, E. Empowering social workers in dealing
+                    with digitalization. In: Getzinger, G., Jahrbacher, M. &amp;
+                    Häller, F. (Hrsg.):
+                    <i
+                      >Conference proceedings of the 20th STS Conference Graz
+                      2022. Critical issues in science, technology and society
+                      studies</i
+                    >. Verlag der Technischen Universität Graz. S. 279–295.
+                  </p>
+                  <a
+                    class="btn btn-sm btn-outline-primary"
+                    href="https://openlib.tugraz.at/conference-proceedings-of-the-20th-sts-conference-graz-2022-critical-issues-in-science-technology-and-society-studies-24-may-2022-2022"
+                    target="_blank"
+                  >
+                    <i class="bx bx-link-external me-2"></i>
+                    Zum Artikel
+                  </a>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Verteiltes Arbeiten während COVID-19 (2022)
+                  </h3>
+                  <p class="mb-3">
+                    Hart, P., Sackl-Sharif, S., Gutounig, R., Taberhofer, A.
+                    &amp; Rauter, R. Bestandsaufnahme,
+                    Diskriminierungspotenziale, Handlungsempfehlungen. In:
+                    Pichler, C. &amp; Küffner, C. (Hrsg.):
+                    <i>Arbeit, Prekariat und COVID-19</i>. Springer VS, S.
+                    99–117.
+                  </p>
+                  <a
+                    class="btn btn-sm btn-outline-primary"
+                    href="https://doi.org/10.1007/978-3-658-35997-3_6"
+                    target="_blank"
+                  >
+                    <i class="bx bx-link-external me-2"></i>
+                    Zum Artikel
+                  </a>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digital Literacies während der Pandemie (2022)
+                  </h3>
+                  <p class="mb-3">
+                    Hart, P., Gutounig, R. &amp; Sackl-Sharif, S. Verteiltes
+                    Arbeiten und Digital Literacies während der
+                    Covid-19-Pandemie. In:
+                    <i
+                      >Proceedings des 15. Forschungsforums der öst.
+                      Fachhochschulen</i
+                    >.
+                  </p>
+                  <a
+                    class="btn btn-sm btn-outline-primary"
+                    href="http://ffhoarep.fh-ooe.at/handle/123456789/1617"
+                    target="_blank"
+                  >
+                    <i class="bx bx-link-external me-2"></i>
+                    Zum Artikel
+                  </a>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="publications-2021">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Digitale Transformation (2021)</h3>
+                  <p class="mb-3">
+                    Klinger, S. &amp; Mayr, A. Die digitale Transformation
+                    transparent gestalten. In: <i>Sozialwirtschaft</i>, 3/2021,
+                    S. 10–12.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Medienkompetenz und Web Literacy (2021)
+                  </h3>
+                  <p class="mb-3">
+                    Klinger, S. &amp; Mayr, A. Digitalisierungsprozesse in der
+                    Sozialen Arbeit. Fachkräfte im Spannungsfeld der Aneignung
+                    und Vermittlung von Medienkompetenz und Web Literacy. In:
+                    Muckenhuber, J., Griesbacher, M., Hödl, J. &amp; Zilian, L.
+                    (Hrsg.):
+                    <i
+                      >Disruption der Arbeit? Zu den Folgen der Digitalisierung
+                      im Dienstleistungssektor</i
+                    >. Campus Verlag, S. 327–354.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Digitalisation in Social Work (2021)</h3>
+                  <p class="mb-3">
+                    Klinger, S. &amp; Mayr, A. Digitalisation in the context of
+                    social work. In: Bütow, B., Holztrattner, M. &amp;
+                    Raithelhuber, E. (Hrsg.):
+                    <i
+                      >Organisation und Institution in der Sozialen Arbeit.
+                      Herausforderungen, Prozesse und Ambivalenzen</i
+                    >. Budrich Verlag, S. 169–188.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Zusammenarbeit am Arbeitsplatz (2021)</h3>
+                  <p class="mb-3">
+                    Rauter, R., Lerch, A., Lederer-Hutsteiner, T., Klinger, S.,
+                    Mayr, A., Gutounig, R. &amp; Pammer-Schindler, V. Digital
+                    und/oder analog? Zusammenarbeit am Arbeitsplatz aus der
+                    Perspektive österreichischer Unternehmen. In:
+                    <i>Wirtschaftsinformatik &amp; Management</i>, 13, S. 48–58.
+                  </p>
+                  <a
+                    class="btn btn-sm btn-outline-primary"
+                    href="https://link.springer.com/article/10.1365/s35764-020-00307-6"
+                    target="_blank"
+                  >
+                    <i class="bx bx-link-external me-2"></i>
+                    Zum Artikel
+                  </a>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="publications-2020">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Transformationsprozesse in der Sozialen Arbeit (2020)
+                  </h3>
+                  <p class="mb-3">
+                    Klinger, S. &amp; Mayr, A. Digitale Transformationsprozesse
+                    in der Sozialen Arbeit. Strukturelle Veränderungen und neue
+                    Herausforderungen im Umgang mit Digitalisierungsprozessen.
+                    In: <i>Der Pädagogische Blick</i>, 2/2020, S. 82–92.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digital und/oder analog im Gesundheitswesen (2020)
+                  </h3>
+                  <p class="mb-3">
+                    Klinger, S., Mayr, A., Rauter, R. &amp; Lerch, A. Digital
+                    und/oder analog? Zusammenarbeit am Arbeitsplatz im
+                    Gesundheits- und Sozialwesen aus der Perspektive von
+                    Führungskräften. In: <i>Soziales_Kapital</i>, 24, S.
+                    377–391.
+                  </p>
+                  <a
+                    class="btn btn-sm btn-outline-primary"
+                    href="https://soziales-kapital.at/index.php/sozialeskapital/article/view/685"
+                    target="_blank"
+                  >
+                    <i class="bx bx-link-external me-2"></i>
+                    Zum Artikel
+                  </a>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="publications-2019">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digitalisierung in der Sozialen Arbeit (2019)
+                  </h3>
+                  <p class="mb-3">
+                    Klinger, S., Mayr, A. &amp; Sackl-Sharif, S. Digitalisierung
+                    in den Handlungsfeldern der Sozialen Arbeit. In:
+                    Griesbacher, M., Hödl, J., Muckenhuber, J. &amp;
+                    Scaria-Braunstein, K. (Hrsg.):
+                    <i
+                      >Intensivierung der Arbeit. Perspektiven auf Arbeitszeit
+                      und technologischen Wandel</i
+                    >. new academic press. S. 113–122.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="publications-2018">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digitalisierte Arbeitsprozesse im Gesundheitsbereich (2018)
+                  </h3>
+                  <p class="mb-3">
+                    Gutounig, R., Rauter, R., Sackl-Sharif, S., Klinger, S.
+                    &amp; Dennerlein, S. Zwischen Produktivität und Überlastung.
+                    Auswirkungen digitalisierter Arbeitsprozesse im
+                    Gesundheitsdienstleistungsbereich am Beispiel Krankenhaus.
+                    In:
+                    <i
+                      >Tagungsband des 12. Forschungsforum der österreichischen
+                      Fachhochschulen (FFH)</i
+                    >.
+                  </p>
+                  <a
+                    class="btn btn-sm btn-outline-primary"
+                    href="http://ffhoarep.fh-ooe.at/handle/123456789/1138"
+                    target="_blank"
+                  >
+                    <i class="bx bx-link-external me-2"></i>
+                    Zum Artikel
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Presentations Section -->
+            <div class="mb-5 presentations">
+              <h2 class="h4 mb-4" id="presentations">
+                <i class="bx bx-conversation me-2 text-primary"></i>
+                Vorträge
+              </h2>
+              <div class="card border-0 shadow-sm mb-4" id="presentations-2024">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Digital Literacies (Oktober 2024)</h3>
+                  <p class="mb-3">
+                    <i
+                      >Aneignungsmöglichkeiten von Digital Literacies im Feld
+                      der Sozialen Arbeit. Perspektiven von Fachkräften und
+                      Handlungsempfehlungen für Organisationen</i
+                    >. Herbsttreffen der Fachgruppe Soziale Arbeit und
+                    Digitalisierung der Deutschen Gesellschaft für Soziale
+                    Arbeit, 18.10.2024. (online)
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Artificial Intelligence in der Kinder- und Jugendarbeit
+                    (September 2024)
+                  </h3>
+                  <p class="mb-3">
+                    <i
+                      >Diversitätsgerechter Umgang mit Artificial Intelligence.
+                      Chancen, Risiken &amp; Grenzen für die Kinder- und
+                      Jugendarbeit</i
+                    >. ÖFEB Kongress 2024, Pädagogische Hochschule Wien,
+                    25.09.2024.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digitalisierte Soziale Arbeit (September 2024)
+                  </h3>
+                  <p class="mb-3">
+                    <i
+                      >Ortsunabhängiges und zeitflexibles Arbeiten in der
+                      digitalisierten Sozialen Arbeit. Ein Spannungsfeld von
+                      organisationalen Rahmenbedingungen und individuellen
+                      Strategien</i
+                    >. Webinar 'Digital social work. What we have learned from
+                    practice', Free University of Bozen/Bolzano, 24.09.2024.
+                    (online)
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    KI in der Sozialen Arbeit (September 2024)
+                  </h3>
+                  <p class="mb-3">
+                    <i
+                      >Algorithmisch-vermittelte Beziehungen. Artificial
+                      Intelligence in der Sozialen Arbeit</i
+                    >. 10. Tagung der Österreichischen Gesellschaft für
+                    Geschlechterforschung, Universität Graz &amp; TU Graz,
+                    18.09.2024.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">KI und Diversität (September 2024)</h3>
+                  <p class="mb-3">
+                    <i
+                      >Gelingensbedingungen für den Einsatz von Künstlicher
+                      Intelligenz in der Kinder- und Jugendarbeit. Geschlechter-
+                      und diversitätsreflektierende Perspektiven</i
+                    >. Internationaler Kongress 'Soziale Arbeit und
+                    Digitalität', Fachhochschule Nordwestschweiz Olten,
+                    07.09.2024.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Diversity und Digitalisierung (Juli 2024)
+                  </h3>
+                  <p class="mb-3">
+                    <i
+                      >Diversity und Digitalisierung. (K)ein Thema für den
+                      Sozial- und Gesundheitsbereich</i
+                    >. APOLLON Hochschule der Gesundheitswirtschaft, 09.07.2024.
+                    (online)
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Digitale Transformation (März 2024)</h3>
+                  <p class="mb-3">
+                    <i
+                      >Ortsunabhängiges und zeitflexibles Arbeiten. Die
+                      digitalisierte Soziale Arbeit im Spannungsfeld von
+                      organisationalen Rahmenbedingungen und individuellen
+                      Strategien</i
+                    >. Fachtagung 'Soziale Digitalisierung', Jena, 12.03.2024.
+                    (online)
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="presentations-2023">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Digital Divide (September 2023)</h3>
+                  <p class="mb-3">
+                    <i
+                      >Zwischen Digital Divide &amp; der kreativ-transformativen
+                      Gestaltung des digitalen Raums. Inklusionsmöglichkeiten
+                      &amp; Exklusionsrisiken durch die Nutzung digitaler
+                      Technologien</i
+                    >. ÖFEB-Sektionstagung der Sektion Sozialpädagogik,
+                    Universität Klagenfurt, 21.09.2023.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digitalisierte Arbeitsbedingungen (September 2023)
+                  </h3>
+                  <p class="mb-3">
+                    <i
+                      >Sich verändernde Arbeitsbedingungen in der
+                      digitalisierten Sozialen Arbeit – Ergebnisse einer
+                      österreichweiten Onlinebefragung mit Fachkräften</i
+                    >. Arlt Symposium, FH St. Pölten, 21.09.2023. (online)
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Online-Ideenlabs (März 2023)</h3>
+                  <p class="mb-3">
+                    <i
+                      >Online-Ideenlabs als partizipatives (Forschungs-)Tool.
+                      Die Entwicklung von Handlungsempfehlungen mit und für
+                      Fachkräfte der Sozialen Arbeit</i
+                    >. Workshop 'Digitalisierung Sozialer Arbeit im
+                    Spannungsfeld von Standardisierung und Organisationskultur',
+                    Hamburg, 27.03.2023.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="presentations-2022">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digitale Transformationsprozesse (Mai 2022)
+                  </h3>
+                  <p class="mb-3">
+                    <i
+                      >Soziale Dienstleistung im Zeitalter der Digitalisierung –
+                      Digitale Transformationsprozesse aktiv mitgestalten!</i
+                    >
+                    Fachforum Universität Gewerkschaften, 05.05.2022. (online)
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Digital Transformation (Mai 2022)</h3>
+                  <p class="mb-3">
+                    <i
+                      >Actively Shape Digital Transformation Processes!
+                      Empowering Social Workers in Dealing with
+                      Digitalization</i
+                    >. STS Conference Graz, 02.05.2022.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="presentations-2021">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digitale Transformationen (September 2021)
+                  </h3>
+                  <p class="mb-3">
+                    <i
+                      >Digitale Transformationen im Spannungsfeld von Kritik und
+                      Engagement. Erste Ergebnisse einer österreichweiten
+                      Mitarbeiter*innenbefragung aus Organisationen der Sozialen
+                      Arbeit</i
+                    >. ÖFEB-Sektionstagung der Sektion Sozialpädagogik,
+                    Universität Graz, 24.09.2021. (online)
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Research in Progress (Juni 2021)</h3>
+                  <p class="mb-3">
+                    <i
+                      >Research in Progress. Digitale Transformationen in
+                      Organisationen der Sozialen Arbeit in Zeiten von Corona</i
+                    >. Sozialpädagogisches Symposium, Universität Graz,
+                    24.06.2021. (online)
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Digitale Transformation (Juni 2021)</h3>
+                  <p class="mb-3">
+                    <i>Digitale Transformation in der Sozialen Arbeit</i>.
+                    Digitalisierung in der Sozialen Arbeit:
+                    Wissenschaft-Praxis-Diskurs, Universität Köln &amp;
+                    Fachhochschule Bielefeld. 14.06.2021. (online)
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Soziale Arbeit im digitalen Zeitalter (März 2021)
+                  </h3>
+                  <p class="mb-3">
+                    <i
+                      >Soziale Arbeit digital und/oder analog? Ein Blick auf den
+                      Arbeitsalltag im Zeitalter der Digitalisierung. Was
+                      unterstützt Mitarbeiter_innen in einer sich
+                      transformierenden Praxis?</i
+                    >
+                    OGSA Tagung 2021, 22.03.2021.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="presentations-2020">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Gestaltungspotenziale (September 2020)
+                  </h3>
+                  <p class="mb-3">
+                    <i
+                      >Gestaltungspotenziale digitaler Transformationen.
+                      Individuelle und organisationale Strategien</i
+                    >. Arlt Symposium, FH St. Pölten, 16.09.2020. (online)
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="presentations-2019">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digitale Transformationen in der Steiermark (September 2019)
+                  </h3>
+                  <p class="mb-3">
+                    <i
+                      >Steirische sozialpädagogische Fachkräfte in
+                      Spannungsfeldern digitaler Transformationen. Individuelle
+                      und organisationale Strategien</i
+                    >. Universität Salzburg. ÖFEB-Kongress, 20.09.2019.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Forschungszugänge (April 2019)</h3>
+                  <p class="mb-3">
+                    <i
+                      >Digitalisierung in der Sozialen Arbeit. Mögliche
+                      Forschungszugänge</i
+                    >. Volkshilfe-Klausur. 24.04.2019.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="presentations-2018">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Transformationsprozesse (September 2018)
+                  </h3>
+                  <p class="mb-3">
+                    <i
+                      >Transformationsprozesse der Sozialen Arbeit in der
+                      Digitalität</i
+                    >. ÖFEB-Sektionstagung der Sektion Sozialpädagogik, Paris
+                    Lodron Universität Salzburg, 21.09.2018.
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">
+                    Digitalisierte Arbeitsprozesse (April 2018)
+                  </h3>
+                  <p class="mb-3">
+                    <i
+                      >Zwischen Produktivität und Überlastung. Auswirkungen
+                      digitalisierter Arbeitsprozesse im
+                      Gesundheitsdienstleistungsbereich am Beispiel
+                      Krankenhaus</i
+                    >. FH Forschungsforum 2018, FH Salzburg, 05.04.2018
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-4" id="presentations-2017">
+                <div class="card-body">
+                  <h3 class="h5 mb-3">Digitale Mediennutzung (Mai 2017)</h3>
+                  <p class="mb-3">
+                    <i
+                      >Zwischen Produktivität und Überlastung. Digitale
+                      Mediennutzung und ihre Folgen für Arbeitnehmer_innen und
+                      Unternehmen</i
+                    >. Denkwerkstätte Graz 2017, AMS Steiermark &amp; Wien, FH
+                    JOANNEUM, Universität Graz, 23.05.2017.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Sidebar -->
+          <div class="col-lg-3 position-relative zindex-1">
+            <div
+              class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
+              style="top: 105px !important"
+            >
+              <div class="card border-0 shadow-sm bg-secondary">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">Quick Links</h5>
+                  <ul class="nav flex-column">
+                    <!-- Publikationen -->
+                    <li class="nav-item">
+                      <a
+                        class="nav-link d-flex align-items-center p-0 mb-0"
+                        data-scroll=""
+                        data-scroll-offset="70"
+                        href="#publications"
+                      >
+                        <i class="bx bx-book-open fs-lg me-2"></i>
+                        Publikationen
+                      </a>
+                      <!-- Years under Publikationen -->
+                      <ul class="nav flex-column ms-3">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#publications-2025"
+                          >
+                            2025
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#publications-2024"
+                          >
+                            2024
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#publications-2023"
+                          >
+                            2023
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#publications-2022"
+                          >
+                            2022
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#publications-2021"
+                          >
+                            2021
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#publications-2020"
+                          >
+                            2020
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#publications-2019"
+                          >
+                            2019
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#publications-2018"
+                          >
+                            2018
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- Vorträge -->
+                    <li class="nav-item mt-2">
+                      <a
+                        class="nav-link d-flex align-items-center p-0"
+                        data-scroll=""
+                        data-scroll-offset="70"
+                        href="#presentations"
+                      >
+                        <i class="bx bx-conversation fs-lg me-2"></i>
+                        Vorträge
+                      </a>
+                      <!-- Years under Vorträge -->
+                      <ul class="nav flex-column ms-3">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#presentations-2025"
+                          >
+                            2025
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#presentations-2024"
+                          >
+                            2024
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#presentations-2023"
+                          >
+                            2023
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#presentations-2022"
+                          >
+                            2022
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#presentations-2021"
+                          >
+                            2021
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#presentations-2020"
+                          >
+                            2020
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#presentations-2019"
+                          >
+                            2019
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#presentations-2018"
+                          >
+                            2018
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link p-0"
+                            data-scroll=""
+                            data-scroll-offset="70"
+                            href="#presentations-2017"
+                          >
+                            2017
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer bg-secondary pt-5 pb-4 pb-lg-5">
+      <div class="container text-center text-md-start">
+        <div class="row">
+          <!-- About Section -->
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5>Über diese Website</h5>
+            <p>
+              Dieses Projekt widmet sich der Digitalisierung in der Sozialen
+              Arbeit und bietet wertvolle Einblicke, Publikationen und
+              Empfehlungen.
+            </p>
+          </div>
+          <!-- Quick Links -->
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5>Schnellzugriff</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-decoration-none" href="/team-projects"
+                  >Team &amp; Projekte</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-decoration-none"
+                  href="/presentations-publications"
+                  >Vorträge &amp; Publikationen</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none" href="/products"
+                  >Empfehlungen für die Praxis</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none" href="/future-scenarios"
+                  >Zukunftsszenarien</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Contact Information -->
+          <div class="col-md-4">
+            <h5>Kontakt</h5>
+            <ul class="list-unstyled">
+              <li>
+                Email:
+                <a class="text-decoration-none" href="mailto:info@projekt.de"
+                  >info@projekt.de</a
+                >
+              </li>
+              <li>Telefon: +43 123 456 7890</li>
+              <li>Adresse: Musterstraße 1, 12345 Musterstadt</li>
+              <li>
+                <a class="text-decoration-none" href="#imprint">Impressum</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <p class="mb-0">Digitale Soziale Arbeit. Lizenz?.</p>
+          <p class="mb-0 text-muted">
+            Made with
+            <i
+              class="bx bx-heart d-inline-block fs-lg text-gradient-primary align-middle mt-n1 mx-1"
+            >
+            </i>
+            by
+            <a
+              class="text-muted"
+              href="http://dhcraft.org"
+              rel="noopener noreferrer"
+              target="_blank"
+              >DH Craft</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Back to top button -->
+    <a class="btn-scroll-top" data-scroll="" href="#top">
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>

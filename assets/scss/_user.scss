@@ -1,0 +1,43 @@
+//
+// user.scss
+// Use this to write your custom SCSS
+//
+/* Base styles for the hero letters */
+.hero-letter {
+    font-size: calc(2rem + 2vw);
+    /* Responsive base font size */
+    font-weight: 700;
+    padding: 0 0.25rem;
+    transition: font-size 0.3s ease;
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+    .hero-letter {
+        font-size: calc(2.5rem + 2.5vw);
+    }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+    .hero-letter {
+        font-size: calc(3rem + 3vw);
+    }
+}
+
+/* Extra large devices */
+@media (min-width: 1200px) {
+    .hero-letter {
+        font-size: calc(3.5rem + 3.5vw);
+    }
+}
+
+/* Add subtle hover effect */
+.hero-letter {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.hero-letter:hover {
+    transform: translateZ(10px);
+}

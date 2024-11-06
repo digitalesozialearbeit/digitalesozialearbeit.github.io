@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Digitale Soziale Arbeit
+    </title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Digitale Soziale Arbeit"
+    />
+    <meta
+      name="keywords"
+      content="Digitale Soziale Arbeit"
+    />
+    <meta name="author" content="Digital Humanities Craft" />
+    <meta name="author" content="Susanne Sackl-Sharif" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Digitale Soziale Arbeit"
+    />
+    <meta
+      property="og:description"
+      content="Digitale Soziale Arbeit"
+    />
+    <meta property="og:image" content="Digitale Soziale Arbeit" />
+    <meta
+      property="og:url"
+      content="Digitale Soziale Arbeit"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Digitale Soziale Arbeit"
+    />
+    <meta
+      name="twitter:description"
+      content="Digitale Soziale Arbeit"
+    />
+    <meta
+      name="twitter:image"
+      content="Digitale Soziale Arbeit"
+    />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Favicon and Touch Icons -->
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon.png" />
+
+    <!-- Vendor Styles -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/boxicons/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: 0.6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
+        <div class="container px-3">
+          <a href="/" class="navbar-brand pe-3" title="Home"
+            ><i class="bx bx-home-alt"></i
+          ></a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Team & Projects -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="teamProjectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Team &amp; Projekte
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="teamProjectsDropdown">
+                    <li><a href="/digi-sowi" class="dropdown-item">digi@socialwork</a></li>
+                    <li><a href="/digi-youthwork" class="dropdown-item">digi@youthwork</a></li>
+                    <li><a href="/ai-youthwork" class="dropdown-item">ai@youthwork</a></li>
+                    <li><a href="/team" class="dropdown-item">Team</a></li>
+                  </ul>
+                </li>
+
+                <!-- Presentations & Publications -->
+                <li class="nav-item">
+                  <a href="/presentations-publications" class="nav-link">Vorträge &amp; Publikationen</a>
+                </li>
+                <!-- Podcasts & Medienberichte -->
+                <li class="nav-item">
+                  <a href="/podcasts-media" class="nav-link">Podcasts &amp; Medienberichte</a>
+                </li>
+                <!-- Products or Recommendations -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Empfehlungen für die Praxis
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                    <li><a href="/future-scenarios" class="dropdown-item">Zukunftsszenarien</a></li>
+                    <li><a href="/recommendations" class="dropdown-item">Handlungsempfehlungen: Digitalisierung in der Sozialen Arbeit</a></li>
+                    <li><a href="/resistance-postcards" class="dropdown-item">Postkarten: Umgang mit Widerstand gegenüber Digitalisierung</a></li>
+                    <li><a href="/curriculum" class="dropdown-item">Curriculum</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+          <div
+            class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4"
+            data-bs-toggle="mode"
+          >
+            <input type="checkbox" class="form-check-input" id="theme-mode" />
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"
+              >Light</label
+            >
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"
+              >Dark</label
+            >
+          </div>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+
+      <section class="container mb-5 pt-4 pb-2 py-mg-4">
+        <div class="row gy-4">
+          <!-- Main Content -->
+          <div class="col-lg-9">
+            <!-- Title -->
+            <h1 class="h2 mb-4">Lehrgang "Digitale Jugendarbeit – Fit für die Praxis"</h1>
+
+            <!-- Main Text -->
+            <div class="mb-4 pb-2">
+              <p class="mb-4">Im Rahmen des Projekts <a href="#" class="text-decoration-underline">digi@youthwork</a> wurde von der Universität Graz, der FH JOANNEUM sowie LebensGroß in einem mehrstufigen Prozess ein Lehrgang für die Kinder- und Jugendarbeit entwickelt, der sich zum Ziel gesetzt hat, Fachkräfte der Kinder- und Jugendarbeit in der Ausbildung ihrer Digital Literacies zu unterstützen.</p>
+
+              <p class="mb-4">Der Lehrgang "Digitale Jugendarbeit – Fit für die Praxis" umfasst insgesamt 130 Stunden über die Dauer von 8 Monaten. Kernstück des Lehrgangs ist eine über die Dauer des Lehrgangs laufende eigenständige Projektarbeit, die in Bezug zum Arbeitsalltag der Teilnehmer:innen steht.</p>
+
+              <p>Die Projektarbeit soll dazu dienen, das im Lehrgang erworbene Wissen im Beruf anzuwenden. Dafür werden die Teilnehmer:innen, neben der laufenden Projektbetreuung, mit Reflexions-, Wissens- und Vertiefungsinhalten unterstützt.</p>
+            </div>
+
+            <!-- Key Facts Box -->
+            <div class="card border-0 bg-secondary mb-4">
+              <div class="card-body p-4">
+                <h2 class="h4 mb-3">Eckdaten zum Lehrgang</h2>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <ul class="list-unstyled mb-0">
+                      <li class="d-flex align-items-center mb-2">
+                        <i class="bx bx-time fs-xl me-2"></i>
+                        <span>130 Stunden Gesamtumfang</span>
+                      </li>
+                      <li class="d-flex align-items-center mb-2">
+                        <i class="bx bx-calendar fs-xl me-2"></i>
+                        <span>Dauer: 8 Monate</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul class="list-unstyled mb-0">
+                      <li class="d-flex align-items-center mb-2">
+                        <i class="bx bx-book fs-xl me-2"></i>
+                        <span>Inkl. Projektarbeit</span>
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <i class="bx bx-support fs-xl me-2"></i>
+                        <span>Laufende Projektbetreuung</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar with Download -->
+          <div class="col-lg-3 position-relative zindex-1">
+            <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important;">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">Curriculum herunterladen</h5>
+                  <p class="card-text mb-3">Das vollständige Curriculum zum Lehrgang "Digitale Jugendarbeit – Fit für die Praxis"</p>
+                  <!-- Placeholder download button until curriculum is ready -->
+                  <button type="button" class="btn btn-primary w-100" disabled>
+                    <i class="bx bx-download me-2"></i>
+                    Curriculum (Coming Soon)
+                  </button>
+                  <div class="fs-sm text-muted mt-2 text-center">
+                    Das Curriculum wird in Kürze verfügbar sein
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-secondary pt-5 pb-4 pb-lg-5">
+      <div class="container text-center text-md-start">
+        <div class="row">
+
+          <!-- About Section -->
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5 >Über diese Website</h5>
+            <p >Dieses Projekt widmet sich der Digitalisierung in der Sozialen Arbeit und bietet wertvolle Einblicke, Publikationen und Empfehlungen.</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5 >Schnellzugriff</h5>
+            <ul class="list-unstyled ">
+              <li><a href="/team-projects" class=" text-decoration-none">Team &amp; Projekte</a></li>
+              <li><a href="/presentations-publications" class=" text-decoration-none">Vorträge &amp; Publikationen</a></li>
+              <li><a href="/products" class=" text-decoration-none">Empfehlungen für die Praxis</a></li>
+              <li><a href="/future-scenarios" class=" text-decoration-none">Zukunftsszenarien</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="col-md-4">
+            <h5 >Kontakt</h5>
+            <ul class="list-unstyled ">
+              <li>Email: <a href="mailto:info@projekt.de" class=" text-decoration-none">info@projekt.de</a></li>
+              <li>Telefon: +43 123 456 7890</li>
+              <li>Adresse: Musterstraße 1, 12345 Musterstadt</li>
+              <li><a href="#imprint" class="text-decoration-none">Impressum</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="mt-4 text-center ">
+          <p class="mb-0">Digitale Soziale Arbeit. Lizenz?.</p>
+          <p class="mb-0 text-muted">Made with <i class="bx bx-heart d-inline-block fs-lg text-gradient-primary align-middle mt-n1 mx-1"> </i> by <a href="http://dhcraft.org" class="text-muted" target="_blank" rel="noopener noreferrer">DH Craft</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
