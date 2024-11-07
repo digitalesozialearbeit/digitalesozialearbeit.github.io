@@ -41,3 +41,21 @@
 .hero-letter:hover {
     transform: translateZ(10px);
 }
+
+// Hover Card Portfolio
+ /* Mobile-first approach */
+ .card-portfolio .card-img-overlay {
+    opacity: 1 !important; /* Always visible on mobile */
+    display: flex !important;
+  }
+
+  /* Reset to hover behavior on screens ≥576px */
+  @media (min-width: 576px) {
+    .card-portfolio .card-img-overlay {
+      opacity: 0 !important;
+    }
+
+    .card-portfolio:hover .card-img-overlay {
+      opacity: 1 !important;
+    }
+  }
