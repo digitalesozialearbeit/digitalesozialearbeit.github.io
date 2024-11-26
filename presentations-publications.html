@@ -3,26 +3,32 @@
 <html data-bs-theme="light" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Digitale Soziale Arbeit</title>
+    <title>Soziale Arbeit &amp; Digitalisierung</title>
     <!-- SEO Meta Tags -->
-    <meta content="Digitale Soziale Arbeit" name="description" />
-    <meta content="Digitale Soziale Arbeit" name="keywords" />
+    <meta content="Soziale Arbeit &amp; Digitalisierung" name="description" />
+    <meta content="Soziale Arbeit &amp; Digitalisierung" name="keywords" />
     <meta content="Digital Humanities Craft" name="author" />
     <meta content="Susanne Sackl-Sharif" name="author" />
     <!-- Open Graph -->
-    <meta content="Digitale Soziale Arbeit" property="og:title" />
-    <meta content="Digitale Soziale Arbeit" property="og:description" />
-    <meta content="Digitale Soziale Arbeit" property="og:image" />
-    <meta content="Digitale Soziale Arbeit" property="og:url" />
+    <meta content="Soziale Arbeit &amp; Digitalisierung" property="og:title" />
+    <meta
+      content="Soziale Arbeit &amp; Digitalisierung"
+      property="og:description"
+    />
+    <meta content="Soziale Arbeit &amp; Digitalisierung" property="og:image" />
+    <meta content="Soziale Arbeit &amp; Digitalisierung" property="og:url" />
     <!-- Twitter Card -->
     <meta content="summary_large_image" name="twitter:card" />
-    <meta content="Digitale Soziale Arbeit" name="twitter:title" />
-    <meta content="Digitale Soziale Arbeit" name="twitter:description" />
-    <meta content="Digitale Soziale Arbeit" name="twitter:image" />
+    <meta content="Soziale Arbeit &amp; Digitalisierung" name="twitter:title" />
+    <meta
+      content="Soziale Arbeit &amp; Digitalisierung"
+      name="twitter:description"
+    />
+    <meta content="Soziale Arbeit &amp; Digitalisierung" name="twitter:image" />
     <!-- Viewport -->
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <!-- Theme switcher (color modes) -->
-    <script src="assets/js/theme-switcher.js"></script>
+    <!-- Includes + Theme Switcher -->
+    <script src="assets/js/data-includes.js"></script>
     <!-- Favicon and Touch Icons -->
     <link href="assets/favicon/favicon.svg" rel="icon" type="image/svg+xml" />
     <link href="assets/favicon/favicon.png" rel="icon" type="image/png" />
@@ -142,135 +148,9 @@
     <!-- Page wrapper for sticky footer -->
     <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
     <main class="page-wrapper">
-      <!-- Navbar -->
-      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
-        <div class="container px-3">
-          <a class="navbar-brand pe-3" href="/" title="Home"
-            ><img
-              src="assets/img/home.png"
-              width="40"
-              alt="Logo"
-            /></a>
-          <div class="offcanvas offcanvas-end" id="navbarNav">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button
-                aria-label="Close"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                type="button"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <!-- Team & Projects -->
-                <li class="nav-item dropdown">
-                  <a
-                    aria-expanded="false"
-                    class="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    href="#"
-                    id="teamProjectsDropdown"
-                    role="button"
-                  >
-                    Team &amp; Projekte
-                  </a>
-                  <ul
-                    aria-labelledby="teamProjectsDropdown"
-                    class="dropdown-menu"
-                  >
-                    <li>
-                      <a class="dropdown-item" href="/digi-sowo">digi@socialwork</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/digi-youthwork"
-                        >digi@youthwork</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/ai-youthwork"
-                        >ai@youthwork</a
-                      >
-                    </li>
-                    <li><a class="dropdown-item" href="/team">Team</a></li>
-                  </ul>
-                </li>
-                <!-- Presentations & Publications -->
-                <li class="nav-item">
-                  <a class="nav-link" href="/presentations-publications"
-                    >Vorträge &amp; Publikationen</a
-                  >
-                </li>
-                <!-- Podcasts & Medienberichte -->
-                <li class="nav-item">
-                  <a class="nav-link" href="/podcasts-media"
-                    >Podcasts &amp; Medienberichte</a
-                  >
-                </li>
-                <!-- Products or Recommendations -->
-                <li class="nav-item dropdown">
-                  <a
-                    aria-expanded="false"
-                    class="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    href="#"
-                    id="productsDropdown"
-                    role="button"
-                  >
-                    Empfehlungen für die Praxis
-                  </a>
-                  <ul aria-labelledby="productsDropdown" class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="/future-scenarios"
-                        >Zukunftsszenarien</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/recommendations"
-                        >Handlungsempfehlungen: Digitalisierung in der Sozialen
-                        Arbeit</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/resistance-postcards"
-                        >Postkarten: Umgang mit Widerstand gegenüber
-                        Digitalisierung</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/curriculum">Curriculum</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4"
-            data-bs-toggle="mode"
-          >
-            <input class="form-check-input" id="theme-mode" type="checkbox" />
-            <label class="form-check-label d-none d-sm-block" for="theme-mode"
-              >Light</label
-            >
-            <label class="form-check-label d-none d-sm-block" for="theme-mode"
-              >Dark</label
-            >
-          </div>
-          <button
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            class="navbar-toggler"
-            data-bs-target="#navbarNav"
-            data-bs-toggle="offcanvas"
-            type="button"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </header>
+      <!-- Header (wird inkludiert)-->
+      <div data-include="header.html"></div>
+
       <section class="container mb-5 pt-4 pb-2 py-mg-4">
         <div class="row">
           <div class="col-lg-9">
@@ -967,7 +847,7 @@
                         Publikationen
                       </a>
                       <!-- Years under Publikationen -->
-                      <ul class="nav flex-column ms-3">
+                      <!-- <ul class="nav flex-column ms-3">
                         <li class="nav-item">
                           <a
                             class="nav-link p-0"
@@ -1048,7 +928,7 @@
                             2018
                           </a>
                         </li>
-                      </ul>
+                      </ul> -->
                     </li>
                     <!-- Vorträge -->
                     <li class="nav-item mt-2">
@@ -1062,7 +942,7 @@
                         Vorträge
                       </a>
                       <!-- Years under Vorträge -->
-                      <ul class="nav flex-column ms-3">
+                      <!-- <ul class="nav flex-column ms-3">
                         <li class="nav-item">
                           <a
                             class="nav-link p-0"
@@ -1153,7 +1033,7 @@
                             2017
                           </a>
                         </li>
-                      </ul>
+                      </ul> -->
                     </li>
                   </ul>
                 </div>
@@ -1163,85 +1043,9 @@
         </div>
       </section>
     </main>
-    <!-- Footer -->
-    <footer class="footer bg-secondary pt-5 pb-4 pb-lg-5">
-      <div class="container text-center text-md-start">
-        <div class="row">
-          <!-- About Section -->
-          <div class="col-md-4 mb-4 mb-md-0">
-            <h5>Über diese Website</h5>
-            <p>
-              Dieses Projekt widmet sich der Digitalisierung in der Sozialen
-              Arbeit und bietet wertvolle Einblicke, Publikationen und
-              Empfehlungen.
-            </p>
-          </div>
-          <!-- Quick Links -->
-          <div class="col-md-4 mb-4 mb-md-0">
-            <h5>Schnellzugriff</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a class="text-decoration-none" href="/team-projects"
-                  >Team &amp; Projekte</a
-                >
-              </li>
-              <li>
-                <a
-                  class="text-decoration-none"
-                  href="/presentations-publications"
-                  >Vorträge &amp; Publikationen</a
-                >
-              </li>
-              <li>
-                <a class="text-decoration-none" href="/products"
-                  >Empfehlungen für die Praxis</a
-                >
-              </li>
-              <li>
-                <a class="text-decoration-none" href="/future-scenarios"
-                  >Zukunftsszenarien</a
-                >
-              </li>
-            </ul>
-          </div>
-          <!-- Contact Information -->
-          <div class="col-md-4">
-            <h5>Kontakt</h5>
-            <ul class="list-unstyled">
-              <li>
-                Email:
-                <a class="text-decoration-none" href="mailto:info@projekt.de"
-                  >info@projekt.de</a
-                >
-              </li>
-              <li>Telefon: +43 123 456 7890</li>
-              <li>Adresse: Musterstraße 1, 12345 Musterstadt</li>
-              <li>
-                <a class="text-decoration-none" href="#imprint">Impressum</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-4 text-center">
-          <p class="mb-0">Digitale Soziale Arbeit. Lizenz?.</p>
-          <p class="mb-0 text-muted">
-            Made with
-            <i
-              class="bx bx-heart d-inline-block fs-lg text-gradient-primary align-middle mt-n1 mx-1"
-            >
-            </i>
-            by
-            <a
-              class="text-muted"
-              href="http://dhcraft.org"
-              rel="noopener noreferrer"
-              target="_blank"
-              >DH Craft</a
-            >
-          </p>
-        </div>
-      </div>
-    </footer>
+    <!-- Footer (wird inkludiert)-->
+    <div data-include="footer.html"></div>
+
     <!-- Back to top button -->
     <a class="btn-scroll-top" data-scroll="" href="#top">
       <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>

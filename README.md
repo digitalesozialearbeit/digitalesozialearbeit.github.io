@@ -1,2 +1,2 @@
 # digitalesozialearbeit.github.io
-Hier entsteht die Website "Digitale Soziale Arbeit"
+Hier entsteht die Website "Soziale Arbeit &amp; Digitalisierung"

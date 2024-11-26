@@ -1,0 +1,138 @@
+<!-- Navbar -->
+<!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+<header class="header navbar navbar-expand-lg bg-light navbar-sticky">
+  <div class="container px-3">
+    <a href="/" class="navbar-brand pe-3" title="Home">
+      <img src="assets/img/home.png" width="40" alt="Logo" />
+    </a>
+    <div id="navbarNav" class="offcanvas offcanvas-end">
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Team & Projects -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="teamProjectsDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Team &amp; Projekte
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="teamProjectsDropdown">
+              <li><a href="/team" class="dropdown-item">Team</a></li>
+              <li>
+                <a href="/digi-sowo" class="dropdown-item">digi@socialwork</a>
+              </li>
+              <li>
+                <a href="/digi-youthwork" class="dropdown-item"
+                  >digi@youthwork</a
+                >
+              </li>
+              <li>
+                <a href="/ai-youthwork" class="dropdown-item">ai@youthwork</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Presentations & Publications -->
+          <li class="nav-item">
+            <a href="/presentations-publications" class="nav-link"
+              >Vorträge &amp; Publikationen</a
+            >
+          </li>
+          <!-- Podcasts & Medienberichte -->
+          <li class="nav-item">
+            <a href="/podcasts-media" class="nav-link"
+              >Podcasts &amp; Medienberichte</a
+            >
+          </li>
+          <!-- Products or Recommendations -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="productsDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Empfehlungen für die Praxis
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+              <li>
+                <a
+                  href="#"
+                  class="dropdown-item"
+                  title="Coming soon"
+                  style="
+                    color: gray;
+                    text-decoration: none;
+                    cursor: not-allowed;
+                  "
+                  >Zukunftsszenarien</a
+                >
+              </li>
+              <li>
+                <a href="/recommendations" class="dropdown-item"
+                  >Handlungsempfehlungen: Digitalisierung in der Sozialen
+                  Arbeit</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/resistance-postcards"
+                  class="dropdown-item"
+                  title="Coming soon"
+                  style="
+                    color: gray;
+                    text-decoration: none;
+                    cursor: not-allowed;
+                  "
+                  >Postkarten: Umgang mit Widerstand gegenüber
+                  Digitalisierung</a
+                >
+              </li>
+              <li>
+                <a href="/curriculum" class="dropdown-item">Curriculum</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4"
+      data-bs-toggle="mode"
+    >
+      <input type="checkbox" class="form-check-input" id="theme-mode" />
+      <label class="form-check-label d-none d-sm-block" for="theme-mode"
+        >Light</label
+      >
+      <label class="form-check-label d-none d-sm-block" for="theme-mode"
+        >Dark</label
+      >
+    </div>
+    <button
+      type="button"
+      class="navbar-toggler"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>

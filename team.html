@@ -2,57 +2,37 @@
 <html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8" />
-    <title>
-      Digitale Soziale Arbeit
-    </title>
+    <title>Soziale Arbeit &amp; Digitalisierung</title>
 
     <!-- SEO Meta Tags -->
-    <meta
-      name="description"
-      content="Digitale Soziale Arbeit"
-    />
-    <meta
-      name="keywords"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta name="description" content="Soziale Arbeit &amp; Digitalisierung" />
+    <meta name="keywords" content="Soziale Arbeit &amp; Digitalisierung" />
     <meta name="author" content="Digital Humanities Craft" />
     <meta name="author" content="Susanne Sackl-Sharif" />
 
     <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta property="og:title" content="Soziale Arbeit &amp; Digitalisierung" />
     <meta
       property="og:description"
-      content="Digitale Soziale Arbeit"
+      content="Soziale Arbeit &amp; Digitalisierung"
     />
-    <meta property="og:image" content="Digitale Soziale Arbeit" />
-    <meta
-      property="og:url"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta property="og:image" content="Soziale Arbeit &amp; Digitalisierung" />
+    <meta property="og:url" content="Soziale Arbeit &amp; Digitalisierung" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta name="twitter:title" content="Soziale Arbeit &amp; Digitalisierung" />
     <meta
       name="twitter:description"
-      content="Digitale Soziale Arbeit"
+      content="Soziale Arbeit &amp; Digitalisierung"
     />
-    <meta
-      name="twitter:image"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta name="twitter:image" content="Soziale Arbeit &amp; Digitalisierung" />
 
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Theme switcher (color modes) -->
-    <script src="assets/js/theme-switcher.js"></script>
+    <!-- Includes + Theme Switcher -->
+    <script src="assets/js/data-includes.js"></script>
 
     <!-- Favicon and Touch Icons -->
 
@@ -65,7 +45,11 @@
       media="screen"
       href="assets/vendor/boxicons/css/boxicons.min.css"
     />
-    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"
+    />
 
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
@@ -176,258 +160,218 @@
     <!-- Page wrapper for sticky footer -->
     <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
     <main class="page-wrapper">
-      <!-- Navbar -->
-      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
-        <div class="container px-3">
-          <a href="/" class="navbar-brand pe-3" title="Home"
-            ><img
-              src="assets/img/home.png"
-              width="40"
-              alt="Logo"
-            /></a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <!-- Team & Projects -->
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="teamProjectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Team &amp; Projekte
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="teamProjectsDropdown">
-                    <li><a href="/digi-sowo" class="dropdown-item">digi@socialwork</a></li>
-                    <li><a href="/digi-youthwork" class="dropdown-item">digi@youthwork</a></li>
-                    <li><a href="/ai-youthwork" class="dropdown-item">ai@youthwork</a></li>
-                    <li><a href="/team" class="dropdown-item">Team</a></li>
-                  </ul>
-                </li>
-
-                <!-- Presentations & Publications -->
-                <li class="nav-item">
-                  <a href="/presentations-publications" class="nav-link">Vorträge &amp; Publikationen</a>
-                </li>
-                <!-- Podcasts & Medienberichte -->
-                <li class="nav-item">
-                  <a href="/podcasts-media" class="nav-link">Podcasts &amp; Medienberichte</a>
-                </li>
-                <!-- Products or Recommendations -->
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Empfehlungen für die Praxis
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                    <li><a href="/future-scenarios" class="dropdown-item">Zukunftsszenarien</a></li>
-                    <li><a href="/recommendations" class="dropdown-item">Handlungsempfehlungen: Digitalisierung in der Sozialen Arbeit</a></li>
-                    <li><a href="/resistance-postcards" class="dropdown-item">Postkarten: Umgang mit Widerstand gegenüber Digitalisierung</a></li>
-                    <li><a href="/curriculum" class="dropdown-item">Curriculum</a></li>
-                  </ul>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-          <div
-            class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4"
-            data-bs-toggle="mode"
-          >
-            <input type="checkbox" class="form-check-input" id="theme-mode" />
-            <label class="form-check-label d-none d-sm-block" for="theme-mode"
-              >Light</label
-            >
-            <label class="form-check-label d-none d-sm-block" for="theme-mode"
-              >Dark</label
-            >
-          </div>
-          <button
-            type="button"
-            class="navbar-toggler"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </header>
+      <!-- Header (wird inkludiert)-->
+      <div data-include="header.html"></div>
 
       <section class="container mb-5 pt-4 pb-2 py-mg-4">
-  <h1 class="h2 mb-4">Team</h1>
+        <h1 class="h2 mb-4">Team</h1>
 
-  <div class="row g-4">
-    <!-- Sabine Klinger -->
-    <div class="col-sm-6 col-lg-3">
-      <div class="team-card bg-faded-primary rounded-3 p-4 shadow-sm">
-        <div class="mb-4">
-          <img src="assets/img/Sabine.jpg" class="team-avatar rounded-circle" alt="Sabine Klinger">
+        <div class="row g-4">
+          <!-- Sabine Klinger -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="team-card bg-faded-primary rounded-3 p-4 shadow-sm">
+              <div class="mb-4">
+                <img
+                  src="assets/img/Sabine.jpg"
+                  class="team-avatar rounded-circle"
+                  alt="Sabine Klinger"
+                />
+              </div>
+              <h4 class="h5 mb-2">Sabine Klinger</h4>
+              <p class="text-muted mb-4">
+                ist promovierte Erziehungs- und Bildungswissenschaftlerin sowie
+                Geschlechterforscherin. Sie ist seit 2013
+                Universitätsassistentin am Institut für Erziehungs- und
+                Bildungswissenschaft der Universität Graz, Arbeitsbereich
+                Sozialpädagogik. Sie forscht und lehrt zu den Themen Soziale
+                Arbeit, Digitalisierung, Künstliche Intelligenz, Gender und
+                Diversity, qualitative und partizipative Forschung.
+              </p>
+              <div class="team-social">
+                <a
+                  href="mailto:sabine.klinger@uni-graz.at"
+                  class="btn btn-link btn-sm text-muted me-2"
+                  title="E-Mail"
+                >
+                  <i class="bx bx-envelope"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/dr-sabine-klinger-ma-67031569/"
+                  class="btn btn-link btn-sm text-muted me-2"
+                  title="LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a
+                  href="https://www.researchgate.net/profile/Sabine-Klinger"
+                  class="btn btn-link btn-sm text-muted me-2"
+                  title="ResearchGate"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bx bx-book-alt"></i>
+                </a>
+                <a
+                  href="https://orcid.org/0000-0002-4104-7257"
+                  class="btn btn-link btn-sm text-muted me-2"
+                  title="ORCID"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bx bx-id-card"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Andrea Mayr -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="team-card bg-faded-warning rounded-3 p-4 shadow-sm">
+              <div class="mb-4">
+                <img
+                  src="/api/placeholder/120/120"
+                  class="team-avatar rounded-circle"
+                  alt="Andrea Mayr"
+                />
+              </div>
+              <h4 class="h5 mb-2">Andrea Mayr</h4>
+              <p class="text-muted mb-4">[Placeholder: Beschreibung folgt]</p>
+              <div class="team-social">
+                <a
+                  href="mailto:"
+                  class="btn btn-link btn-sm text-muted me-2"
+                  title="E-Mail"
+                >
+                  <i class="bx bx-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Susanne Sackl-Sharif -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="team-card bg-faded-success rounded-3 p-4 shadow-sm">
+              <div class="mb-4">
+                <img
+                  src="assets/img/Susi.jpg"
+                  class="team-avatar rounded-circle"
+                  alt="Susanne Sackl-Sharif"
+                />
+              </div>
+              <h4 class="h5 mb-2">Susanne Sackl-Sharif</h4>
+              <p class="text-muted mb-4">
+                ist promovierte Soziologin und Musikwissenschaftlerin. Sie
+                forscht und lehrt zu den Themen Digitalisierung, Gender und
+                Diversity, populäre Kulturen, und politische Partizipation.
+              </p>
+              <div class="team-social">
+                <a
+                  href="mailto:susanne.sackl@gmx.net"
+                  class="btn btn-link btn-sm text-muted me-2"
+                  title="E-Mail"
+                >
+                  <i class="bx bx-envelope"></i>
+                </a>
+                <a
+                  href="https://www.sackl-sharif.net"
+                  class="btn btn-link btn-sm text-muted me-2"
+                  title="Website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bx bx-globe"></i>
+                </a>
+                <a
+                  href="https://www.researchgate.net/profile/Susanne-Sackl-Sharif"
+                  class="btn btn-link btn-sm text-muted me-2"
+                  title="ResearchGate"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bx bx-book-alt"></i>
+                </a>
+                <a
+                  href="https://orcid.org/0000-0001-7289-454X"
+                  class="btn btn-link btn-sm text-muted me-2"
+                  title="ORCID"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bx bx-id-card"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Esther Brossmann-Handler -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="team-card bg-faded-danger rounded-3 p-4 shadow-sm">
+              <div class="mb-4">
+                <img
+                  src="/api/placeholder/120/120"
+                  class="team-avatar rounded-circle"
+                  alt="Esther Brossmann-Handler"
+                />
+              </div>
+              <h4 class="h5 mb-2">Esther Brossmann-Handler</h4>
+              <p class="text-muted mb-4">[Placeholder: Beschreibung folgt]</p>
+              <div class="team-social">
+                <a
+                  href="mailto:"
+                  class="btn btn-link btn-sm text-muted me-2"
+                  title="E-Mail"
+                >
+                  <i class="bx bx-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <h4 class="h5 mb-2">Sabine Klinger</h4>
-        <p class="text-muted mb-4">
-          [Placeholder: Beschreibung folgt]
-        </p>
-        <div class="team-social">
-          <a href="mailto:" class="btn btn-link btn-sm text-muted me-2" title="E-Mail">
-            <i class="bx bx-envelope"></i>
-          </a>
-        </div>
-      </div>
-    </div>
 
-    <!-- Andrea Mayr -->
-    <div class="col-sm-6 col-lg-3">
-      <div class="team-card bg-faded-warning rounded-3 p-4 shadow-sm">
-        <div class="mb-4">
-          <img src="/api/placeholder/120/120" class="team-avatar rounded-circle" alt="Andrea Mayr">
-        </div>
-        <h4 class="h5 mb-2">Andrea Mayr</h4>
-        <p class="text-muted mb-4">
-          [Placeholder: Beschreibung folgt]
-        </p>
-        <div class="team-social">
-          <a href="mailto:" class="btn btn-link btn-sm text-muted me-2" title="E-Mail">
-            <i class="bx bx-envelope"></i>
-          </a>
-        </div>
-      </div>
-    </div>
+        <style>
+          .team-card {
+            height: 100%;
+            background-color: #fff;
+            border: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+          }
 
-    <!-- Susanne Sackl-Sharif -->
-    <div class="col-sm-6 col-lg-3">
-      <div class="team-card bg-faded-success rounded-3 p-4 shadow-sm">
-        <div class="mb-4">
-          <img src="/api/placeholder/120/120" class="team-avatar rounded-circle" alt="Susanne Sackl-Sharif">
-        </div>
-        <h4 class="h5 mb-2">Susanne Sackl-Sharif</h4>
-        <p class="text-muted mb-4">
-          ist promovierte Soziologin und Musikwissenschaftlerin. Sie forscht und lehrt zu den Themen Digitalisierung, Gender und Diversity, populäre Kulturen, und politische Partizipation.
-        </p>
-        <div class="team-social">
-          <a href="mailto:susanne.sackl@gmx.net" class="btn btn-link btn-sm text-muted me-2" title="E-Mail">
-            <i class="bx bx-envelope"></i>
-          </a>
-          <a href="https://www.sackl-sharif.net" class="btn btn-link btn-sm text-muted me-2" title="Website" target="_blank" rel="noopener noreferrer">
-            <i class="bx bx-globe"></i>
-          </a>
-          <a href="#" class="btn btn-link btn-sm text-muted me-2" title="ResearchGate" target="_blank" rel="noopener noreferrer">
-            <i class="bx bx-book-alt"></i>
-          </a>
-        </div>
-      </div>
-    </div>
+          .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+          }
 
-    <!-- Esther Brossmann-Handler -->
-    <div class="col-sm-6 col-lg-3">
-      <div class="team-card bg-faded-danger rounded-3 p-4 shadow-sm">
-        <div class="mb-4">
-          <img src="/api/placeholder/120/120" class="team-avatar rounded-circle" alt="Esther Brossmann-Handler">
-        </div>
-        <h4 class="h5 mb-2">Esther Brossmann-Handler</h4>
-        <p class="text-muted mb-4">
-          [Placeholder: Beschreibung folgt]
-        </p>
-        <div class="team-social">
-          <a href="mailto:" class="btn btn-link btn-sm text-muted me-2" title="E-Mail">
-            <i class="bx bx-envelope"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+          .team-avatar {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          }
 
-  <style>
-    .team-card {
-      height: 100%;
-      background-color: #fff;
-      border: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+          .team-social {
+            margin-top: auto;
+          }
 
-    .team-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 .5rem 1rem rgba(0,0,0,.08);
-    }
+          .team-social .btn-link {
+            padding: 0.375rem;
+            color: #6c757d;
+            text-decoration: none;
+          }
 
-    .team-avatar {
-      width: 70px;
-      height: 70px;
-      object-fit: cover;
-      border: 3px solid #fff;
-      box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
-    }
-
-    .team-social {
-      margin-top: auto;
-    }
-
-    .team-social .btn-link {
-      padding: 0.375rem;
-      color: #6c757d;
-      text-decoration: none;
-    }
-
-    .team-social .btn-link:hover {
-      color: #0d6efd;
-      background-color: rgba(13, 110, 253, 0.1);
-      border-radius: 0.375rem;
-    }
-
-
-  </style>
-</section>
-
+          .team-social .btn-link:hover {
+            color: #0d6efd;
+            background-color: rgba(13, 110, 253, 0.1);
+            border-radius: 0.375rem;
+          }
+        </style>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer bg-secondary pt-5 pb-4 pb-lg-5">
-      <div class="container text-center text-md-start">
-        <div class="row">
-
-          <!-- About Section -->
-          <div class="col-md-4 mb-4 mb-md-0">
-            <h5 >Über diese Website</h5>
-            <p >Dieses Projekt widmet sich der Digitalisierung in der Sozialen Arbeit und bietet wertvolle Einblicke, Publikationen und Empfehlungen.</p>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="col-md-4 mb-4 mb-md-0">
-            <h5 >Schnellzugriff</h5>
-            <ul class="list-unstyled ">
-              <li><a href="/team-projects" class=" text-decoration-none">Team &amp; Projekte</a></li>
-              <li><a href="/presentations-publications" class=" text-decoration-none">Vorträge &amp; Publikationen</a></li>
-              <li><a href="/products" class=" text-decoration-none">Empfehlungen für die Praxis</a></li>
-              <li><a href="/future-scenarios" class=" text-decoration-none">Zukunftsszenarien</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact Information -->
-          <div class="col-md-4">
-            <h5 >Kontakt</h5>
-            <ul class="list-unstyled ">
-              <li>Email: <a href="mailto:info@projekt.de" class=" text-decoration-none">info@projekt.de</a></li>
-              <li>Telefon: +43 123 456 7890</li>
-              <li>Adresse: Musterstraße 1, 12345 Musterstadt</li>
-              <li><a href="#imprint" class="text-decoration-none">Impressum</a></li>
-            </ul>
-          </div>
-
-        </div>
-        <div class="mt-4 text-center ">
-          <p class="mb-0">Digitale Soziale Arbeit. Lizenz?.</p>
-          <p class="mb-0 text-muted">Made with <i class="bx bx-heart d-inline-block fs-lg text-gradient-primary align-middle mt-n1 mx-1"> </i> by <a href="http://dhcraft.org" class="text-muted" target="_blank" rel="noopener noreferrer">DH Craft</a></p>
-        </div>
-      </div>
-    </footer>
-
+    <!-- Footer (wird inkludiert)-->
+    <div data-include="footer.html"></div>
 
     <!-- Back to top button -->
     <a href="#top" class="btn-scroll-top" data-scroll>

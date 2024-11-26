@@ -2,57 +2,37 @@
 <html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8" />
-    <title>
-      Digitale Soziale Arbeit
-    </title>
+    <title>Soziale Arbeit &amp; Digitalisierung</title>
 
     <!-- SEO Meta Tags -->
-    <meta
-      name="description"
-      content="Digitale Soziale Arbeit"
-    />
-    <meta
-      name="keywords"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta name="description" content="Soziale Arbeit &amp; Digitalisierung" />
+    <meta name="keywords" content="Soziale Arbeit &amp; Digitalisierung" />
     <meta name="author" content="Digital Humanities Craft" />
     <meta name="author" content="Susanne Sackl-Sharif" />
 
     <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta property="og:title" content="Soziale Arbeit &amp; Digitalisierung" />
     <meta
       property="og:description"
-      content="Digitale Soziale Arbeit"
+      content="Soziale Arbeit &amp; Digitalisierung"
     />
-    <meta property="og:image" content="Digitale Soziale Arbeit" />
-    <meta
-      property="og:url"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta property="og:image" content="Soziale Arbeit &amp; Digitalisierung" />
+    <meta property="og:url" content="Soziale Arbeit &amp; Digitalisierung" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta name="twitter:title" content="Soziale Arbeit &amp; Digitalisierung" />
     <meta
       name="twitter:description"
-      content="Digitale Soziale Arbeit"
+      content="Soziale Arbeit &amp; Digitalisierung"
     />
-    <meta
-      name="twitter:image"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta name="twitter:image" content="Soziale Arbeit &amp; Digitalisierung" />
 
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Theme switcher (color modes) -->
-    <script src="assets/js/theme-switcher.js"></script>
+   <!-- Includes + Theme Switcher -->
+    <script src="assets/js/data-includes.js"></script>
 
     <!-- Favicon and Touch Icons -->
 
@@ -65,7 +45,11 @@
       media="screen"
       href="assets/vendor/boxicons/css/boxicons.min.css"
     />
-    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"
+    />
 
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
@@ -176,90 +160,8 @@
     <!-- Page wrapper for sticky footer -->
     <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
     <main class="page-wrapper">
-      <!-- Navbar -->
-      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
-        <div class="container px-3">
-          <a href="/" class="navbar-brand pe-3" title="Home"
-            ><img
-              src="assets/img/home.png"
-              width="40"
-              alt="Logo"
-            /></a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <!-- Team &amp; Projects -->
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="teamProjectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Team &amp; Projekte
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="teamProjectsDropdown">
-                    <li><a href="/digi-sowo" class="dropdown-item">digi@socialwork</a></li>
-                    <li><a href="/digi-youthwork" class="dropdown-item">digi@youthwork</a></li>
-                    <li><a href="/ai-youthwork" class="dropdown-item">ai@youthwork</a></li>
-                    <li><a href="/team" class="dropdown-item">Team</a></li>
-                  </ul>
-                </li>
-
-                <!-- Presentations &amp; Publications -->
-                <li class="nav-item">
-                  <a href="/presentations-publications" class="nav-link">Vorträge &amp; Publikationen</a>
-                </li>
-                <!-- Podcasts &amp; Medienberichte -->
-                <li class="nav-item">
-                  <a href="/podcasts-media" class="nav-link">Podcasts &amp; Medienberichte</a>
-                </li>
-                <!-- Products or Recommendations -->
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Empfehlungen für die Praxis
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                    <li><a href="/future-scenarios" class="dropdown-item">Zukunftsszenarien</a></li>
-                    <li><a href="/recommendations" class="dropdown-item">Handlungsempfehlungen: Digitalisierung in der Sozialen Arbeit</a></li>
-                    <li><a href="/resistance-postcards" class="dropdown-item">Postkarten: Umgang mit Widerstand gegenüber Digitalisierung</a></li>
-                    <li><a href="/curriculum" class="dropdown-item">Curriculum</a></li>
-                  </ul>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-          <div
-            class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4"
-            data-bs-toggle="mode"
-          >
-            <input type="checkbox" class="form-check-input" id="theme-mode" />
-            <label class="form-check-label d-none d-sm-block" for="theme-mode"
-              >Light</label
-            >
-            <label class="form-check-label d-none d-sm-block" for="theme-mode"
-              >Dark</label
-            >
-          </div>
-          <button
-            type="button"
-            class="navbar-toggler"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </header>
+      <!-- Header (wird inkludiert)-->
+      <div data-include="header.html"></div>
 
       <section class="container mb-5 pt-4 pb-2 py-mg-4">
         <div class="row">
@@ -275,9 +177,21 @@
 
               <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
-                  <h3 class="h5 mb-3">Gender &amp; Mehr: Episode #24: KI in der Sozialen Arbeit</h3>
-                  <p class="mb-3">Podcast zu aktuellen Themen der Geschlechterforschung der Koordinationsstelle für Geschlechterstudien und Gleichstellung der Universität Graz mit Sabine Klinger, Susanne Sackl-Sharif und Christina Fischer-Lessiak (Oktober 2024).</p>
-                  <a href="https://koordination-gender.uni-graz.at/de/services/podcast-gender-mehr/#c683312" class="btn btn-sm btn-outline-primary" target="_blank">
+                  <h3 class="h5 mb-3">
+                    Gender &amp; Mehr: Episode #24: KI in der Sozialen Arbeit
+                  </h3>
+                  <p class="mb-3">
+                    Podcast zu aktuellen Themen der Geschlechterforschung der
+                    Koordinationsstelle für Geschlechterstudien und
+                    Gleichstellung der Universität Graz mit Sabine Klinger,
+                    Susanne Sackl-Sharif und Christina Fischer-Lessiak (Oktober
+                    2024).
+                  </p>
+                  <a
+                    href="https://koordination-gender.uni-graz.at/de/services/podcast-gender-mehr/#c683312"
+                    class="btn btn-sm btn-outline-primary"
+                    target="_blank"
+                  >
                     <i class="bx bx-link-external me-2"></i>
                     Zum Podcast
                   </a>
@@ -286,9 +200,21 @@
 
               <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
-                  <h3 class="h5 mb-3">Sozialgespräch: Episode digi@socialwork</h3>
-                  <p class="mb-3">Podcast rund um Social Impact, digitalen Wandel und vor allem mit inspirierenden Menschen. Christian Müller im Gespräch mit Sabine Klinger und Andrea Mayr über das Thema „Fachkräfte der Sozialen Arbeit in der Digitalen Transformation" (Januar 2023).</p>
-                  <a href="https://www.sozial-pr.net/digisocialwork/" class="btn btn-sm btn-outline-primary" target="_blank">
+                  <h3 class="h5 mb-3">
+                    Sozialgespräch: Episode digi@socialwork
+                  </h3>
+                  <p class="mb-3">
+                    Podcast rund um Social Impact, digitalen Wandel und vor
+                    allem mit inspirierenden Menschen. Christian Müller im
+                    Gespräch mit Sabine Klinger und Andrea Mayr über das Thema
+                    „Fachkräfte der Sozialen Arbeit in der Digitalen
+                    Transformation" (Januar 2023).
+                  </p>
+                  <a
+                    href="https://www.sozial-pr.net/digisocialwork/"
+                    class="btn btn-sm btn-outline-primary"
+                    target="_blank"
+                  >
                     <i class="bx bx-link-external me-2"></i>
                     Zum Podcast
                   </a>
@@ -305,9 +231,18 @@
 
               <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
-                  <h3 class="h5 mb-3">Thematische Analyse in 7 Schritten mit MAXQDA</h3>
-                  <p class="mb-3">Susanne Sackl-Sharif beschreibt die Auswertungsstrategie des Projekts digi@socialwork für den MAXQDA Blog (2022).</p>
-                  <a href="https://www.maxqda.com/de/blogpost/thematische-analyse-in-7-schritten-mit-maxqda" class="btn btn-sm btn-outline-primary" target="_blank">
+                  <h3 class="h5 mb-3">
+                    Thematische Analyse in 7 Schritten mit MAXQDA
+                  </h3>
+                  <p class="mb-3">
+                    Susanne Sackl-Sharif beschreibt die Auswertungsstrategie des
+                    Projekts digi@socialwork für den MAXQDA Blog (2022).
+                  </p>
+                  <a
+                    href="https://www.maxqda.com/de/blogpost/thematische-analyse-in-7-schritten-mit-maxqda"
+                    class="btn btn-sm btn-outline-primary"
+                    target="_blank"
+                  >
                     <i class="bx bx-link-external me-2"></i>
                     Zum Blogbeitrag
                   </a>
@@ -316,9 +251,19 @@
 
               <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
-                  <h3 class="h5 mb-3">Technologie erleichtert soziale Arbeit. Digitaler Wandel ist gut angekommen</h3>
-                  <p class="mb-3">Bericht über das Projekt digi@socialwork in Die Presse (Print-Ausgabe: 22.10.2022 | Online-Ausgabe: 21.10.2022).</p>
-                  <a href="https://www.diepresse.com/6206034/technologie-erleichtert-soziale-arbeit" class="btn btn-sm btn-outline-primary" target="_blank">
+                  <h3 class="h5 mb-3">
+                    Technologie erleichtert soziale Arbeit. Digitaler Wandel ist
+                    gut angekommen
+                  </h3>
+                  <p class="mb-3">
+                    Bericht über das Projekt digi@socialwork in Die Presse
+                    (Print-Ausgabe: 22.10.2022 | Online-Ausgabe: 21.10.2022).
+                  </p>
+                  <a
+                    href="https://www.diepresse.com/6206034/technologie-erleichtert-soziale-arbeit"
+                    class="btn btn-sm btn-outline-primary"
+                    target="_blank"
+                  >
                     <i class="bx bx-link-external me-2"></i>
                     Zum Artikel
                   </a>
@@ -328,8 +273,15 @@
               <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
                   <h3 class="h5 mb-3">Hilfe statt Hürde</h3>
-                  <p class="mb-3">Bericht über das Projekt digi@socialwork auf myScience.at von Gudrun Pichler (14.10.2022).</p>
-                  <a href="https://www.myscience.at/news/2022/hilfe_statt_huerde-2022-Uni-Graz" class="btn btn-sm btn-outline-primary" target="_blank">
+                  <p class="mb-3">
+                    Bericht über das Projekt digi@socialwork auf myScience.at
+                    von Gudrun Pichler (14.10.2022).
+                  </p>
+                  <a
+                    href="https://www.myscience.at/news/2022/hilfe_statt_huerde-2022-Uni-Graz"
+                    class="btn btn-sm btn-outline-primary"
+                    target="_blank"
+                  >
                     <i class="bx bx-link-external me-2"></i>
                     Zum Artikel
                   </a>
@@ -338,8 +290,14 @@
 
               <div class="card border-0 shadow-sm">
                 <div class="card-body">
-                  <h3 class="h5 mb-3">Uni-Projekt erforscht die Digitalisierung im Sozialbereich</h3>
-                  <p class="mb-3">Bericht über das Projekt digi@socialwork in ZAK - Zeitschrift für Arbeitnehmer:innen der steirischen Arbeiterkammer, Ausgabe 2 (2021).</p>
+                  <h3 class="h5 mb-3">
+                    Uni-Projekt erforscht die Digitalisierung im Sozialbereich
+                  </h3>
+                  <p class="mb-3">
+                    Bericht über das Projekt digi@socialwork in ZAK -
+                    Zeitschrift für Arbeitnehmer:innen der steirischen
+                    Arbeiterkammer, Ausgabe 2 (2021).
+                  </p>
                 </div>
               </div>
             </div>
@@ -347,16 +305,29 @@
 
           <!-- Sidebar -->
           <div class="col-lg-3 position-relative zindex-1">
-            <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important;">
+            <div
+              class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
+              style="top: 105px !important"
+            >
               <nav class="nav flex-column">
                 <div class="card border-0 shadow-sm bg-secondary">
                   <div class="card-body">
                     <h5 class="card-title mb-3">Quick Links</h5>
-                    <a href="#podcasts" data-scroll data-scroll-offset="70" class="nav-link d-flex align-items-center p-0 mb-2">
+                    <a
+                      href="#podcasts"
+                      data-scroll
+                      data-scroll-offset="70"
+                      class="nav-link d-flex align-items-center p-0 mb-2"
+                    >
                       <i class="bx bx-podcast fs-lg me-2"></i>
                       Podcasts
                     </a>
-                    <a href="#articles" data-scroll data-scroll-offset="70" class="nav-link d-flex align-items-center p-0">
+                    <a
+                      href="#articles"
+                      data-scroll
+                      data-scroll-offset="70"
+                      class="nav-link d-flex align-items-center p-0"
+                    >
                       <i class="bx bx-news fs-lg me-2"></i>
                       Blogbeiträge &amp; Artikel
                     </a>
@@ -369,47 +340,8 @@
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer bg-secondary pt-5 pb-4 pb-lg-5">
-      <div class="container text-center text-md-start">
-        <div class="row">
-
-          <!-- About Section -->
-          <div class="col-md-4 mb-4 mb-md-0">
-            <h5 >Über diese Website</h5>
-            <p >Dieses Projekt widmet sich der Digitalisierung in der Sozialen Arbeit und bietet wertvolle Einblicke, Publikationen und Empfehlungen.</p>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="col-md-4 mb-4 mb-md-0">
-            <h5 >Schnellzugriff</h5>
-            <ul class="list-unstyled ">
-              <li><a href="/team-projects" class=" text-decoration-none">Team &amp; Projekte</a></li>
-              <li><a href="/presentations-publications" class=" text-decoration-none">Vorträge &amp; Publikationen</a></li>
-              <li><a href="/products" class=" text-decoration-none">Empfehlungen für die Praxis</a></li>
-              <li><a href="/future-scenarios" class=" text-decoration-none">Zukunftsszenarien</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact Information -->
-          <div class="col-md-4">
-            <h5 >Kontakt</h5>
-            <ul class="list-unstyled ">
-              <li>Email: <a href="mailto:info@projekt.de" class=" text-decoration-none">info@projekt.de</a></li>
-              <li>Telefon: +43 123 456 7890</li>
-              <li>Adresse: Musterstraße 1, 12345 Musterstadt</li>
-              <li><a href="#imprint" class="text-decoration-none">Impressum</a></li>
-            </ul>
-          </div>
-
-        </div>
-        <div class="mt-4 text-center ">
-          <p class="mb-0">Digitale Soziale Arbeit. Lizenz?.</p>
-          <p class="mb-0 text-muted">Made with <i class="bx bx-heart d-inline-block fs-lg text-gradient-primary align-middle mt-n1 mx-1"> </i> by <a href="http://dhcraft.org" class="text-muted" target="_blank" rel="noopener noreferrer">DH Craft</a></p>
-        </div>
-      </div>
-    </footer>
-
+     <!-- Footer (wird inkludiert)-->
+    <div data-include="footer.html"></div>
 
     <!-- Back to top button -->
     <a href="#top" class="btn-scroll-top" data-scroll>

@@ -2,57 +2,37 @@
 <html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8" />
-    <title>
-      Digitale Soziale Arbeit
-    </title>
+    <title>Soziale Arbeit &amp; Digitalisierung</title>
 
     <!-- SEO Meta Tags -->
-    <meta
-      name="description"
-      content="Digitale Soziale Arbeit"
-    />
-    <meta
-      name="keywords"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta name="description" content="Soziale Arbeit &amp; Digitalisierung" />
+    <meta name="keywords" content="Soziale Arbeit &amp; Digitalisierung" />
     <meta name="author" content="Digital Humanities Craft" />
     <meta name="author" content="Susanne Sackl-Sharif" />
 
     <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta property="og:title" content="Soziale Arbeit &amp; Digitalisierung" />
     <meta
       property="og:description"
-      content="Digitale Soziale Arbeit"
+      content="Soziale Arbeit &amp; Digitalisierung"
     />
-    <meta property="og:image" content="Digitale Soziale Arbeit" />
-    <meta
-      property="og:url"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta property="og:image" content="Soziale Arbeit &amp; Digitalisierung" />
+    <meta property="og:url" content="Soziale Arbeit &amp; Digitalisierung" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta name="twitter:title" content="Soziale Arbeit &amp; Digitalisierung" />
     <meta
       name="twitter:description"
-      content="Digitale Soziale Arbeit"
+      content="Soziale Arbeit &amp; Digitalisierung"
     />
-    <meta
-      name="twitter:image"
-      content="Digitale Soziale Arbeit"
-    />
+    <meta name="twitter:image" content="Soziale Arbeit &amp; Digitalisierung" />
 
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Theme switcher (color modes) -->
-    <script src="assets/js/theme-switcher.js"></script>
+    <!-- Includes + Theme Switcher -->
+    <script src="assets/js/data-includes.js"></script>
 
     <!-- Favicon and Touch Icons -->
 
@@ -65,7 +45,11 @@
       media="screen"
       href="assets/vendor/boxicons/css/boxicons.min.css"
     />
-    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"
+    />
 
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
@@ -176,116 +160,85 @@
     <!-- Page wrapper for sticky footer -->
     <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
     <main class="page-wrapper">
-      <!-- Navbar -->
-      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
-        <div class="container px-3">
-          <a href="/" class="navbar-brand pe-3" title="Home"
-            ><img
-              src="assets/img/home.png"
-              width="40"
-              alt="Logo"
-            /></a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <!-- Team & Projects -->
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="teamProjectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Team &amp; Projekte
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="teamProjectsDropdown">
-                    <li><a href="/digi-sowo" class="dropdown-item">digi@socialwork</a></li>
-                    <li><a href="/digi-youthwork" class="dropdown-item">digi@youthwork</a></li>
-                    <li><a href="/ai-youthwork" class="dropdown-item">ai@youthwork</a></li>
-                    <li><a href="/team" class="dropdown-item">Team</a></li>
-                  </ul>
-                </li>
-
-                <!-- Presentations & Publications -->
-                <li class="nav-item">
-                  <a href="/presentations-publications" class="nav-link">Vorträge &amp; Publikationen</a>
-                </li>
-                <!-- Podcasts & Medienberichte -->
-                <li class="nav-item">
-                  <a href="/podcasts-media" class="nav-link">Podcasts &amp; Medienberichte</a>
-                </li>
-                <!-- Products or Recommendations -->
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Empfehlungen für die Praxis
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                    <li><a href="/future-scenarios" class="dropdown-item">Zukunftsszenarien</a></li>
-                    <li><a href="/recommendations" class="dropdown-item">Handlungsempfehlungen: Digitalisierung in der Sozialen Arbeit</a></li>
-                    <li><a href="/resistance-postcards" class="dropdown-item">Postkarten: Umgang mit Widerstand gegenüber Digitalisierung</a></li>
-                    <li><a href="/curriculum" class="dropdown-item">Curriculum</a></li>
-                  </ul>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-          <div
-            class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4"
-            data-bs-toggle="mode"
-          >
-            <input type="checkbox" class="form-check-input" id="theme-mode" />
-            <label class="form-check-label d-none d-sm-block" for="theme-mode"
-              >Light</label
-            >
-            <label class="form-check-label d-none d-sm-block" for="theme-mode"
-              >Dark</label
-            >
-          </div>
-          <button
-            type="button"
-            class="navbar-toggler"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </header>
+      <!-- Header (wird inkludiert)-->
+      <div data-include="header.html"></div>
 
       <section class="container mb-5 pt-4 pb-2 py-mg-4">
         <div class="row">
           <div class="col-lg-8">
             <!-- Main Title -->
-            <h1 class="h2 mb-4">digi@sowo</h1>
-            <h2 class="h4 text-muted mb-4">Soziale Dienstleistungen im Zeitalter der Digitalisierung – Digitale Transformationsprozesse aktiv mitgestalten</h2>
+            <h1 class="h2 mb-4">digi@socialwork</h1>
+            <h2 class="h4 text-muted mb-4">
+              Soziale Dienstleistungen im Zeitalter der Digitalisierung –
+              Digitale Transformationsprozesse aktiv mitgestalten
+            </h2>
 
             <!-- Project Description -->
             <div class="card border-0 shadow-sm mb-4 p-4">
               <div class="card-body p-0">
-                <p class="mb-0">Digitale Technologien und soziale Medien sind am Arbeitsplatz kaum noch wegzudenken. Auch in sozialen Dienstleistungsbetrieben kommen digitale Medien, Tools und Devices bereits vielfach zum Einsatz. Dabei eröffnen diese neue Möglichkeiten in der Betreuung, Begleitung und Versorgung von Adressat*innen.</p>
-                <p class="mb-0">Vor diesem Hintergrund wurden in diesem partizipativen und praxisorientierten Forschungsprojekt österreichweit betriebliche Digitalisierungsprozesse analysiert, um gemeinsam mit Fachkräften der Sozialen Arbeit Möglichkeiten der aktiven Mitgestaltung zu erarbeiten. Die wichtigsten Handlungsempfehlungen wurden in Form eines Plakats sowie eines Videos festgehalten.</p>
+                <p class="mb-0">
+                  Digitale Technologien und soziale Medien sind am Arbeitsplatz
+                  kaum noch wegzudenken. Auch in sozialen
+                  Dienstleistungsbetrieben kommen digitale Medien, Tools und
+                  Devices bereits vielfach zum Einsatz. Dabei eröffnen diese
+                  neue Möglichkeiten in der Betreuung, Begleitung und Versorgung
+                  von Adressat*innen.
+                </p>
+                <p class="mb-0">
+                  Vor diesem Hintergrund wurden in diesem partizipativen und
+                  praxisorientierten Forschungsprojekt österreichweit
+                  betriebliche Digitalisierungsprozesse analysiert, um gemeinsam
+                  mit Fachkräften der Sozialen Arbeit Möglichkeiten der aktiven
+                  Mitgestaltung zu erarbeiten. Die wichtigsten
+                  Handlungsempfehlungen wurden in Form eines Plakats sowie eines
+                  Videos festgehalten.
+                </p>
               </div>
             </div>
 
-            <!-- Methods Section (Placeholder) -->
+            <!-- Methods Section -->
             <div class="card border-0 bg-soft-primary shadow-sm mb-4 p-4">
               <div class="card-body p-0">
                 <h3 class="h5 mb-3">
                   <i class="bx bx-line-chart me-2"></i>
                   Methoden
                 </h3>
-                <p class="mb-0 text-muted">
-                  [Placeholder: Details zu den Forschungsmethoden werden hier ergänztDetails zu den Forschungsmethoden werden hier ergänztDetails zu den Forschungsmethoden werden hier ergänztDetails zu den Forschungsmethoden werden hier ergänztDetails zu den Forschungsmethoden werden hier ergänztDetails zu den Forschungsmethoden werden hier ergänztDetails zu den Forschungsmethoden werden hier ergänztDetails zu den Forschungsmethoden werden hier ergänztDetails zu den Forschungsmethoden werden hier ergänztDetails zu den Forschungsmethoden werden hier ergänzt]
-                </p>
+                <div class="mb-3">
+                  <p class="mb-3">
+                    Im Projekt digi@socialwork führten wir
+                    <strong>drei aufeinander aufbauende Methoden</strong> durch.
+                  </p>
+                  <p class="mb-3">
+                    Um Basisinformationen zur Nutzung digitaler Tools durch
+                    Fachkräfte der Sozialen Arbeit zu erheben, führten wir von
+                    März bis Mai 2021 eine österreichweite
+                    <strong>Online-Umfrage in sieben Organisationen</strong> im
+                    Bereich der Sozialen Arbeit durch. Die Umfrage umfasste 22
+                    Fragen, etwa zu den Themen Einstellung zur Digitalisierung,
+                    Selbsteinschätzung der privaten und beruflichen Digital
+                    Literacies oder Bedarf an Unterstützung. Insgesamt nahmen
+                    <strong>1.246 Personen</strong> an der Online-Umfrage teil.
+                  </p>
+                  <p class="mb-3">
+                    Von Mai bis August 2021 führten wir
+                    <strong>neun (Online-)Gruppendiskussionen</strong> mit 25
+                    Fachkräften der Sozialen Arbeit durch, um die praktischen
+                    Erfahrungen und Perspektiven der Fachkräfte genauer zu
+                    erforschen. Wir bezogen sieben verschiedene Organisationen
+                    ein, die sich in Anzahl der Mitarbeiter:innen, geografischer
+                    Verteilung und Handlungsfeldern unterschieden.
+                  </p>
+                  <p class="mb-0">
+                    Von Januar bis Februar 2022 führten wir 13
+                    <strong>Online-Ideenlabs</strong> mit 37 Fachkräften durch.
+                    Die je zweistündigen Online-Ideenlabs fanden auf der
+                    kollaborativen Online-Plattform Miro statt. Ausgehend von
+                    unseren Erkenntnissen aus der Online-Befragung und den
+                    Gruppendiskussionen entwickelten wir in einem partizipativen
+                    Setting Handlungsempfehlungen für die Arbeitspraxis von
+                    Fachkräften.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -296,15 +249,117 @@
                   <i class="bx bx-bulb me-2"></i>
                   Wichtige Ergebnisse
                 </h3>
-                <p class="mb-0 text-muted">
-                  [Placeholder: Die wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasstDie wichtigsten Forschungsergebnisse werden hier zusammengefasst]
-                </p>
+                <!-- Publications Section -->
+                <div
+                  class="card-hover card border-0 shadow-sm mb-4"
+                  id="publications-2025"
+                >
+                  <div class="card-body">
+                    <h3 class="h5 mb-3">Orts- und zeitunabhängiges Arbeiten</h3>
+                    <p class="mb-3">
+                      Klinger, S., Sackl-Sharif, S. &amp; Mayr, A. (2025). Die
+                      digitalisierte Soziale Arbeit im Spannungsfeld von
+                      organisationalen Rahmenbedingungen und individuellen
+                      Strategien. In: Opielka, M. &amp; Erfurth, C. (Hrsg.):
+                      <i
+                        >Soziale Digitalisierung. Perspektiven zu den
+                        Schnittstellen von Technik und Gesellschaft,
+                        Perspektiven der Sozialpolitik</i
+                      >. VS Springer, S. XX–YY.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="card-hover card border-0 shadow-sm mb-4"
+                  id="publications-2024a"
+                >
+                  <div class="card-body">
+                    <h3 class="h5 mb-3">Digital Divide und digitaler Raum</h3>
+                    <p class="mb-3">
+                      Sackl-Sharif, S., Mayr, A. &amp; Klinger, S. (2024).
+                      Zwischen Digital Divide und kreativ-transformativer
+                      Gestaltung des digitalen Raums. Zur Arbeit mit
+                      Adressat:innen in der digitalisierten Sozialen Arbeit. In:
+                      Lauermann, K., More, R., Sigot, M. &amp; Sting, S.
+                      (Hrsg.):
+                      <i
+                        >Soziale Arbeit zwischen Inklusion und Exklusion.
+                        Perspektiven aus Forschung und Praxis</i
+                      >. Barbara Budrich, S. 142–152.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="card-hover card border-0 shadow-sm mb-4"
+                  id="publications-2024b"
+                >
+                  <div class="card-body">
+                    <h3 class="h5 mb-3">
+                      Partizipative Online-Ideenlabs (neu entwickelte Methode)
+                    </h3>
+                    <p class="mb-3">
+                      Mayr, A., Sackl-Sharif, S. &amp; Klinger, S. (2024).
+                      Spannungsdynamiken und Lösungsansätze partizipativ
+                      verhandeln. Über die Arbeit mit Online-Ideenlabs zur
+                      Entwicklung von Handlungsempfehlungen für die Gestaltung
+                      von Digitalisierungsprozessen in Organisationen der
+                      Sozialen Arbeit. In: Degel, A. &amp; Liebsch, K. (Hrsg.):
+                      <i
+                        >Digitalität und Ambiguität. Organisationskulturen der
+                        Sozialen Arbeit unter Druck</i
+                      >. Beltz Juventa, S. 168–193.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="card-hover card border-0 shadow-sm mb-4"
+                  id="publications-2023a"
+                >
+                  <div class="card-body">
+                    <h3 class="h5 mb-3">
+                      Digital Literacies im Feld der Sozialen Arbeit
+                    </h3>
+                    <p class="mb-3">
+                      Sackl-Sharif, S., Klinger, S., Mayr, A. &amp;
+                      Brossmann-Handler, E. (2023) Aneignungsmöglichkeiten von
+                      Digital Literacies im Feld der Sozialen Arbeit.
+                      Perspektiven von Fachkräften und Handlungsempfehlungen für
+                      Organisationen. In: <i>Der pädagogische Blick</i>, 31(4),
+                      S. 238–248.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="card-hover card border-0 shadow-sm mb-4"
+                  id="publications-2023b"
+                >
+                  <div class="card-body">
+                    <h3 class="h5 mb-3">
+                      Nutzung digitaler Technologien in der Sozialen Arbeit
+                    </h3>
+                    <p class="mb-3">
+                      Klinger, S., Mayr, A., Sackl-Sharif, S. &amp;
+                      Brossmann-Handler, E. (2023). Zur (nicht)
+                      selbstverständlichen Nutzung digitaler Technologie in der
+                      Sozialen Arbeit. Ergebnisse einer österreichweiten
+                      Befragung von Fachkräften. In:
+                      <i
+                        >Soziale Arbeit. Zeitschrift für soziale und
+                        sozialverwandte Gebiete</i
+                      >, 72(6), S. 202–211.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Project Info Sidebar -->
-          <div class="col-lg-4 ">
+          <div class="col-lg-4">
             <div class="sticky-top" style="top: 105px">
               <!-- Project Details Card -->
               <div class="card border-0 shadow-sm mb-4 bg-faded-success">
@@ -313,7 +368,9 @@
 
                   <div class="mb-4">
                     <h4 class="small text-muted mb-2">Fördergeberin</h4>
-                    <p class="mb-0">Arbeiterkammer Steiermark "Projektsfonds Arbeit 4.0"</p>
+                    <p class="mb-0">
+                      Arbeiterkammer Steiermark "Projektsfonds Arbeit 4.0"
+                    </p>
                   </div>
 
                   <div class="mb-4">
@@ -322,14 +379,22 @@
                   </div>
 
                   <div class="mb-4">
-                    <h4 class="small text-muted mb-2">Durchführende Institutionen</h4>
+                    <h4 class="small text-muted mb-2">
+                      Durchführende Institutionen
+                    </h4>
                     <ul class="list-unstyled mb-0">
-                      <li class="mb-2">Institut für Bildungs- und Erziehungswissenschaft (Karl-Franzens-Universität Graz)</li>
-                      <li>IGSF – Interdisziplinäre Gesellschaft für Sozialtechnologie und Forschung</li>
+                      <li class="mb-2">
+                        Institut für Erziehungs- und Bildungswissenschaft
+                        (Universität Graz)
+                      </li>
+                      <li>
+                        IGSF – Interdisziplinäre Gesellschaft für
+                        Sozialtechnologie und Forschung
+                      </li>
                     </ul>
                   </div>
 
-                  <hr class="my-4">
+                  <hr class="my-4" />
 
                   <!-- Download Section -->
                   <h4 class="h6 mb-3">Projektergebnisse</h4>
@@ -348,52 +413,11 @@
             </div>
           </div>
         </div>
-
-
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer bg-secondary pt-5 pb-4 pb-lg-5">
-      <div class="container text-center text-md-start">
-        <div class="row">
-
-          <!-- About Section -->
-          <div class="col-md-4 mb-4 mb-md-0">
-            <h5 >Über diese Website</h5>
-            <p >Dieses Projekt widmet sich der Digitalisierung in der Sozialen Arbeit und bietet wertvolle Einblicke, Publikationen und Empfehlungen.</p>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="col-md-4 mb-4 mb-md-0">
-            <h5 >Schnellzugriff</h5>
-            <ul class="list-unstyled ">
-              <li><a href="/team-projects" class=" text-decoration-none">Team &amp; Projekte</a></li>
-              <li><a href="/presentations-publications" class=" text-decoration-none">Vorträge &amp; Publikationen</a></li>
-              <li><a href="/products" class=" text-decoration-none">Empfehlungen für die Praxis</a></li>
-              <li><a href="/future-scenarios" class=" text-decoration-none">Zukunftsszenarien</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact Information -->
-          <div class="col-md-4">
-            <h5 >Kontakt</h5>
-            <ul class="list-unstyled ">
-              <li>Email: <a href="mailto:info@projekt.de" class=" text-decoration-none">info@projekt.de</a></li>
-              <li>Telefon: +43 123 456 7890</li>
-              <li>Adresse: Musterstraße 1, 12345 Musterstadt</li>
-              <li><a href="#imprint" class="text-decoration-none">Impressum</a></li>
-            </ul>
-          </div>
-
-        </div>
-        <div class="mt-4 text-center ">
-          <p class="mb-0">Digitale Soziale Arbeit. Lizenz?.</p>
-          <p class="mb-0 text-muted">Made with <i class="bx bx-heart d-inline-block fs-lg text-gradient-primary align-middle mt-n1 mx-1"> </i> by <a href="http://dhcraft.org" class="text-muted" target="_blank" rel="noopener noreferrer">DH Craft</a></p>
-        </div>
-      </div>
-    </footer>
-
+    <!-- Footer (wird inkludiert)-->
+    <div data-include="footer.html"></div>
 
     <!-- Back to top button -->
     <a href="#top" class="btn-scroll-top" data-scroll>
