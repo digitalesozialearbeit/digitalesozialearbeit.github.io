@@ -177,13 +177,11 @@
             </h1>
 
             <!-- Card Grid -->
-            <!-- Card Grid -->
             <div
-              class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3 g-4"
+              class="mt-5 row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3 g-4"
               id="cardGrid"
             >
               <!-- Cards will be appended here via JS. -->
-              <!-- Template for a single card -->
               <!-- Template -->
               <template id="cardTemplate">
                 <div class="col">
@@ -192,21 +190,30 @@
                       <!-- Front Face -->
                       <div class="flip-card-front card h-100">
                         <div class="card-img-wrapper">
-                          <img class="card-img-top" alt="Front">
+                          <img class="card-img-top" alt="Front" />
                           <div class="card-img-overlay">
                             <i class="bx bx-zoom-in"></i>
                           </div>
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"></h5>
-                          <div class="d-flex gap-2 justify-content-start align-items-center">
-                            <button class="flip-btn btn btn-outline-primary btn-sm">
+                          <div
+                            class="d-flex gap-2 justify-content-start align-items-center"
+                          >
+                            <button
+                              class="flip-btn btn btn-outline-primary btn-sm"
+                            >
                               <i class="bx bx-rotate-right me-1"></i>Flip
                             </button>
-                            <button class="view-btn btn btn-outline-info btn-sm">
+                            <button
+                              class="view-btn btn btn-outline-success btn-sm"
+                            >
                               <i class="bx bx-zoom-in me-1"></i>View
                             </button>
-                            <a href="#" class="download-btn btn btn-outline-secondary btn-sm">
+                            <a
+                              href="#"
+                              class="download-btn btn btn-outline-secondary btn-sm"
+                            >
                               <i class="bx bx-download me-1"></i>PDF
                             </a>
                           </div>
@@ -215,21 +222,30 @@
                       <!-- Back Face -->
                       <div class="flip-card-back card h-100">
                         <div class="card-img-wrapper">
-                          <img class="card-img-top" alt="Back">
+                          <img class="card-img-top" alt="Back" />
                           <div class="card-img-overlay">
                             <i class="bx bx-zoom-in"></i>
                           </div>
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"></h5>
-                          <div class="d-flex gap-2 justify-content-start align-items-center">
-                            <button class="flip-btn btn btn-outline-primary btn-sm">
+                          <div
+                            class="d-flex gap-2 justify-content-start align-items-center"
+                          >
+                            <button
+                              class="flip-btn btn btn-outline-primary btn-sm"
+                            >
                               <i class="bx bx-rotate-left me-1"></i>Back
                             </button>
-                            <button class="view-btn btn btn-outline-info btn-sm">
+                            <button
+                              class="view-btn btn btn-outline-info btn-sm"
+                            >
                               <i class="bx bx-zoom-in me-1"></i>View
                             </button>
-                            <a href="#" class="download-btn btn btn-outline-secondary btn-sm">
+                            <a
+                              href="#"
+                              class="download-btn btn btn-outline-secondary btn-sm"
+                            >
                               <i class="bx bx-download me-1"></i>PDF
                             </a>
                           </div>
@@ -238,7 +254,7 @@
                     </div>
                   </div>
                 </div>
-               </template>
+              </template>
             </div>
           </div>
 
@@ -256,8 +272,9 @@
                     betrachten Sie einzelne Karten in der Übersicht.
                   </p>
                   <a
-                    href="path/to/complete_set.pdf"
+                    href="assets/img/postcards/pdf/Kartenset_gesamt.pdf"
                     class="btn btn-primary w-100"
+                    download
                   >
                     <i class="bx bx-download me-2"></i>
                     Komplettes Set (PDF)

@@ -2,39 +2,39 @@
 
 /* Each card has a fixed height for a stable layout.
    Adjust 400px as you like; all cards are the same height. */
-   .flip-card {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    perspective: 1000px;
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  perspective: 1000px;
 }
 
 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s ease;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
 }
 
 /* front/back faces occupy the same space, absolutely stacked */
 .flip-card-front,
 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
 }
 
 .flip-card-back {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 /* When .flipped is toggled on parent, rotate the .flip-card-inner */
 .flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 /* Image and hover effects */
@@ -42,62 +42,61 @@
   cursor: pointer;
 }
 .card-img-top {
-    position: relative;
-    object-fit: cover;
-    width: 100%;
-    height: 200px;
-    cursor: pointer;
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  cursor: pointer;
 }
 
 /* Image wrapper to handle the overlay */
 .card-img-wrapper {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Overlay for hover effect */
 .card-img-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
 /* Zoom icon */
 .card-img-overlay i {
-    color: white;
-    font-size: 2rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  color: white;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 /* Hover states */
 @media (hover: hover) {
-    .card-img-wrapper:hover .card-img-overlay {
-        background-color: rgba(0, 0, 0, 0.3);
-    }
+  .card-img-wrapper:hover .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 
-    .card-img-wrapper:hover .card-img-overlay i {
-        opacity: 1;
-    }
+  .card-img-wrapper:hover .card-img-overlay i {
+    opacity: 1;
+  }
 }
 
 /* Touch states */
 .card-img-wrapper:active .card-img-overlay {
-    background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .card-img-wrapper:active .card-img-overlay i {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Lightbox caption */
 .lg-sub-html h4 {
-    color: white !important;
+  color: white !important;
 }
