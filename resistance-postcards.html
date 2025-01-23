@@ -31,7 +31,7 @@
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-   <!-- Includes + Theme Switcher -->
+    <!-- Includes + Theme Switcher -->
     <script src="assets/js/data-includes.js"></script>
 
     <!-- Favicon and Touch Icons -->
@@ -53,6 +53,9 @@
 
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
+
+    <!-- Additional Styles for this page only -->
+    <link rel="stylesheet" media="screen" href="assets/css/flip-cards.css" />
 
     <!-- Page loading styles -->
     <style>
@@ -173,48 +176,69 @@
               Digitalisierung
             </h1>
 
-            <!-- Coming Soon Notice -->
-            <div class="card border-0 bg-secondary mb-4">
-              <div class="card-body p-4">
-                <div class="d-flex align-items-center">
-                  <i class="bx bx-time-five fs-2 me-3"></i>
-                  <div>
-                    <h3 class="h5 mb-2">In Entwicklung</h3>
-                    <p class="mb-0">
-                      Die Postkarten und Handlungsempfehlungen zum Umgang mit
-                      Widerstand gegenüber Digitalisierung werden hier bald
-                      präsentiert.
-                    </p>
+            <!-- Card Grid -->
+            <!-- Card Grid -->
+            <div
+              class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3 g-4"
+              id="cardGrid"
+            >
+              <!-- Cards will be appended here via JS. -->
+              <!-- Template for a single card -->
+              <!-- Template -->
+              <template id="cardTemplate">
+                <div class="col">
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <!-- Front Face -->
+                      <div class="flip-card-front card h-100">
+                        <div class="card-img-wrapper">
+                          <img class="card-img-top" alt="Front">
+                          <div class="card-img-overlay">
+                            <i class="bx bx-zoom-in"></i>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title"></h5>
+                          <div class="d-flex gap-2 justify-content-start align-items-center">
+                            <button class="flip-btn btn btn-outline-primary btn-sm">
+                              <i class="bx bx-rotate-right me-1"></i>Flip
+                            </button>
+                            <button class="view-btn btn btn-outline-info btn-sm">
+                              <i class="bx bx-zoom-in me-1"></i>View
+                            </button>
+                            <a href="#" class="download-btn btn btn-outline-secondary btn-sm">
+                              <i class="bx bx-download me-1"></i>PDF
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Back Face -->
+                      <div class="flip-card-back card h-100">
+                        <div class="card-img-wrapper">
+                          <img class="card-img-top" alt="Back">
+                          <div class="card-img-overlay">
+                            <i class="bx bx-zoom-in"></i>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title"></h5>
+                          <div class="d-flex gap-2 justify-content-start align-items-center">
+                            <button class="flip-btn btn btn-outline-primary btn-sm">
+                              <i class="bx bx-rotate-left me-1"></i>Back
+                            </button>
+                            <button class="view-btn btn btn-outline-info btn-sm">
+                              <i class="bx bx-zoom-in me-1"></i>View
+                            </button>
+                            <a href="#" class="download-btn btn btn-outline-secondary btn-sm">
+                              <i class="bx bx-download me-1"></i>PDF
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <!-- Placeholder Content -->
-            <div class="row g-4">
-              <div class="col-12">
-                <div class="card border-0 bg-faded-primary">
-                  <div class="card-body p-4">
-                    <h2 class="h4 mb-3">Postkarten-Serie</h2>
-                    <p class="mb-0">
-                      Hier werden die Postkarten präsentiert werden, die
-                      verschiedene Aspekte des Widerstands gegenüber
-                      Digitalisierung thematisieren.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="card border-0 bg-faded-info">
-                  <div class="card-body p-4">
-                    <h2 class="h4 mb-3">Begleitende Materialien</h2>
-                    <p class="mb-0">
-                      Zusätzliche Materialien und Handreichungen zum Umgang mit
-                      Widerstand werden hier zur Verfügung gestellt.
-                    </p>
-                  </div>
-                </div>
-              </div>
+               </template>
             </div>
           </div>
 
@@ -228,13 +252,16 @@
                 <div class="card-body">
                   <h5 class="card-title mb-3">Materialien herunterladen</h5>
                   <p class="card-text mb-3">
-                    Die Postkarten und begleitende Materialien werden in Kürze
-                    zum Download bereitstehen.
+                    Laden Sie das komplette Kartenset als PDF herunter oder
+                    betrachten Sie einzelne Karten in der Übersicht.
                   </p>
-                  <button type="button" class="btn btn-primary w-100" disabled>
+                  <a
+                    href="path/to/complete_set.pdf"
+                    class="btn btn-primary w-100"
+                  >
                     <i class="bx bx-download me-2"></i>
-                    Coming Soon
-                  </button>
+                    Komplettes Set (PDF)
+                  </a>
                 </div>
               </div>
             </div>
@@ -243,7 +270,7 @@
       </section>
     </main>
 
-     <!-- Footer (wird inkludiert)-->
+    <!-- Footer (wird inkludiert)-->
     <div data-include="footer.html"></div>
 
     <!-- Back to top button -->
@@ -259,5 +286,8 @@
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
+
+    <!-- Additional Scripts for this page only -->
+    <script src="assets/js/flip-cards.js"></script>
   </body>
 </html>
