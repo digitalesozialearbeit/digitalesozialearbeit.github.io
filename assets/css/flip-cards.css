@@ -37,6 +37,27 @@
   transform: rotateY(180deg);
 }
 
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: help;
+  position: relative;
+  padding-right: 20px; /* Space for the indicator */
+}
+
+/* Info indicator for all devices */
+.card-title::after {
+  content: "\eb21";
+  font-family: "boxicons";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  opacity: 0.8;
+}
+
 /* Image and hover effects */
 .card-img-wrapper {
   cursor: pointer;

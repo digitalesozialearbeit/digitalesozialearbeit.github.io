@@ -3,9 +3,55 @@ class PostcardViewer {
     this.template = document.getElementById("cardTemplate");
     this.container = document.getElementById("cardGrid");
     this.cardTitles = {
-      0: { front: "Titel", back: "Titel - Rückseite" },
-      1: { front: "Karte 2", back: "Karte 2 - Rückseite" },
-      // ... more if needed
+      0: {
+        front: "Kartenset - Titelkarte",
+        back: "Informationen über das Kartenset",
+      },
+      1: {
+        front: "Digitalisierung und Soziale Arbeit. Ein Widerspruch?",
+        back: "Digitalisierung und Soziale Arbeit. Ein Widerspruch? - Rückseite",
+      },
+      2: {
+        front: "Wie entsteht Widerstand?",
+        back: "Wie entsteht Widerstand? - Rückseite",
+      },
+      3: { front: "Widerstandsformen", back: "Widerstandsformen - Rückseite" },
+      4: {
+        front: "Digitalisierungsstrategie",
+        back: "Digitalisierungsstrategie - Rückseite",
+      },
+      5: {
+        front: "Mitgestaltungsmöglichkeiten",
+        back: "Mitgestaltungsmöglichkeiten - Rückseite",
+      },
+      6: { front: "Transparenz", back: "Transparenz - Rückseite" },
+      7: { front: "Flexible Lösungen", back: "Flexible Lösungen - Rückseite" },
+      8: {
+        front: "Technologische Infrastruktur",
+        back: "Technologische Infrastruktur - Rückseite",
+      },
+      9: {
+        front: "Partizipation von Fachkräften",
+        back: "Partizipation von Fachkräften - Rückseite",
+      },
+      10: {
+        front: "Unterstützungsformen",
+        back: "Unterstützungsformen - Rückseiten",
+      },
+      11: {
+        front: "Arbeitserleichterung",
+        back: "Arbeitserleichterung - Rückseite",
+      },
+      12: {
+        front: "Digital Literacies",
+        back: "Digital Literacies - Rückseite",
+      },
+      13: { front: "Learning by Doing", back: "Learning by Doing - Rückseite" },
+      14: {
+        front: "Informeller Austausch",
+        back: "Informeller Austausch - Rückseite",
+      },
+      15: { front: "Fortbildungen", back: "Fortbildungen - Rückseite" },
     };
     this.init();
   }
@@ -60,11 +106,21 @@ class PostcardViewer {
     backImg.src = cardData.backImage;
     backImg.alt = cardData.backTitle;
 
-    // front/back titles:
-    clone.querySelector(".flip-card-front .card-title").textContent =
-      cardData.frontTitle;
-    clone.querySelector(".flip-card-back .card-title").textContent =
-      cardData.backTitle;
+    // front/back titles with tooltips:
+    const frontTitle = clone.querySelector(".flip-card-front .card-title");
+    const backTitle = clone.querySelector(".flip-card-back .card-title");
+
+    frontTitle.textContent = cardData.frontTitle;
+    backTitle.textContent = cardData.backTitle;
+
+    // Add tooltip attributes
+    frontTitle.setAttribute("data-bs-toggle", "tooltip");
+    frontTitle.setAttribute("data-bs-placement", "top");
+    frontTitle.setAttribute("title", cardData.frontTitle);
+
+    backTitle.setAttribute("data-bs-toggle", "tooltip");
+    backTitle.setAttribute("data-bs-placement", "top");
+    backTitle.setAttribute("title", cardData.backTitle);
 
     // Set PDF download links
     clone.querySelector(".flip-card-front .download-btn").href = frontPdf;
@@ -77,6 +133,14 @@ class PostcardViewer {
     const flipCard =
       this.container.lastElementChild.querySelector(".flip-card");
 
+    // Initialize tooltips for this card
+    const tooltipTriggerList = [].slice.call(
+      flipCard.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    tooltipTriggerList.forEach((tooltipTriggerEl) => {
+      new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
     // 1 Flip toggles:
     flipCard.querySelectorAll(".flip-btn").forEach((btn) => {
       btn.addEventListener("click", (evt) => {
@@ -85,6 +149,7 @@ class PostcardViewer {
         flipCard.classList.toggle("flipped");
       });
     });
+
     // 2) Add click handlers for view buttons
     flipCard.querySelectorAll(".view-btn").forEach((btn) => {
       btn.addEventListener("click", (evt) => {
