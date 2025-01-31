@@ -163,7 +163,7 @@ In diesem Guide erfährst du, wie du Inhalte auf der Website “Digitale Soziale
 
 ## ❗ Wichtige Hinweise
 
-- **Header und Footer** (z.B. `header.html` / `footer.html`) sind global eingebunden
+- **Header (Menü oben) und Footer** (`header.html` / `footer.html`) sind global per JavaScript eingebunden: `<div data-include="header.html"></div>`
   → Änderungen betreffen alle Seiten.
 - **Neue Komponenten**
   → Bei Fragen zu Stil und Gestaltung: [Silicon UI Kit](https://silicon.createx.studio/components/typography.html)
