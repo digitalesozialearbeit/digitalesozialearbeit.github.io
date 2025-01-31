@@ -14,7 +14,7 @@ In diesem Guide erfährst du, wie du Inhalte auf der Website “Digitale Soziale
 3. **Grundkenntnisse in HTML**
    Einsteiger-Tutorial: [W3Schools HTML Tutorial](https://www.w3schools.com/html/)
 
-> **Hinweis**: Ein “HTML-Tag” ist ein Element in spitzen Klammern, z.B. `<h2>` oder `<p>`. Nur den Text zwischen diesen Tags bearbeiten, nicht die Tags selbst.
+> **Hinweis**: Ein “HTML-Tag” ist ein Element in spitzen Klammern, z.B. `<h2>` oder `<p>`. Den Text zwischen diesen Tags zu bearbeiten ist immer unproblematisch. Alles andere haut Auswirkungen auf Design und FUnktionalität, nicht nur Content.
 
 ---
 
@@ -69,7 +69,7 @@ In diesem Guide erfährst du, wie du Inhalte auf der Website “Digitale Soziale
 5. **Bestätigen**
    Klicke auf “Commit changes”, um die Änderungen zu speichern.
 
-> **Hinweis**: Änderungen über das Webinterface sind in der Regel direkt wirksam.
+> **Hinweis**: Änderungen über das Webinterface direkt wirksam, also direkt *Online*.
 
 ---
 
@@ -125,7 +125,7 @@ In diesem Guide erfährst du, wie du Inhalte auf der Website “Digitale Soziale
    - Deine Änderungen werden angezeigt (grün: hinzugefügt, rot: entfernt)
    - Eine kurze, aussagekräftige Beschreibung eingeben
    - Auf **“Commit to main”** klicken (lokales Speichern der Änderungen)
-   - Anschließend **“Push origin”** klicken (Änderungen auf GitHub hochladen)
+   - Anschließend **“Push origin”** klicken (Änderungen werden auf GitHub hochladen und gehen *online*)
 
 ---
 
