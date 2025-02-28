@@ -37,7 +37,7 @@
   transform: rotateY(180deg);
 }
 
-.card-title {
+.col-lg-9 .card-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -47,7 +47,7 @@
 }
 
 /* Info indicator for all devices */
-.card-title::after {
+.col-lg-9 .card-title::after {
   content: "\eb21";
   font-family: "boxicons";
   position: absolute;
