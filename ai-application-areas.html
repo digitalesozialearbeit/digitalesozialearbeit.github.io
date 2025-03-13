@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>KI in der Sozialen Arbeit: Anwendungsbereiche</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="KI in der Sozialen Arbeit: Anwendungsbereiche"
+    />
+    <meta
+      name="keywords"
+      content="KI, Soziale Arbeit, Anwendungsbereiche, Digitalisierung"
+    />
+    <meta name="author" content="Digital Humanities Craft" />
+    <meta name="author" content="Susanne Sackl-Sharif" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="KI in der Sozialen Arbeit: Anwendungsbereiche"
+    />
+    <meta
+      property="og:description"
+      content="KI in der Sozialen Arbeit: Anwendungsbereiche"
+    />
+    <meta
+      property="og:image"
+      content="KI in der Sozialen Arbeit: Anwendungsbereiche"
+    />
+    <meta
+      property="og:url"
+      content="KI in der Sozialen Arbeit: Anwendungsbereiche"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="KI in der Sozialen Arbeit: Anwendungsbereiche"
+    />
+    <meta
+      name="twitter:description"
+      content="KI in der Sozialen Arbeit: Anwendungsbereiche"
+    />
+    <meta
+      name="twitter:image"
+      content="KI in der Sozialen Arbeit: Anwendungsbereiche"
+    />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Includes + Theme Switcher -->
+    <script src="assets/js/data-includes.js"></script>
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon.png" />
+
+    <!-- Vendor Styles -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/boxicons/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"
+    />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: 0.6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Header (wird inkludiert)-->
+      <div data-include="header.html"></div>
+
+      <section class="container mb-5 pt-4 pb-2 py-mg-4">
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <!-- Main Title -->
+            <h1 class="h2 mb-4">
+              KI in der Sozialen Arbeit: Vier (zukünftige) Anwendungsfelder
+            </h1>
+
+            <!-- Project Description -->
+            <div class="card border-0 shadow-sm mb-4 p-4">
+              <div class="card-body p-0">
+                <!-- Application Field 1 -->
+                <div class="card border-0 shadow-sm mb-4 bg-faded-primary">
+                  <div class="card-body p-4">
+                    <h2 class="h4 mb-3">Anwendungsfeld 1: Contenterstellung</h2>
+
+                    <h3 class="h5 mb-2">Worum gehts?</h3>
+                    <p class="mb-3">
+                      In der Kinder- und Jugendarbeit ist die Kommunikation mit
+                      der Zielgruppe eine zentrale Aufgabe von Fach- und
+                      Führungskräften. KI kann bei diesen kommunikativen
+                      Prozessen unterstützen. Generative KI-Tools wie ChatGPT,
+                      DeepL oder Claude können genutzt werden, um Texte zu
+                      generieren, zu kommentieren, zusammenzufassen oder zu
+                      optimieren. KI kann aber auch als Impulsgeberin für
+                      kreative Prozesse eingesetzt werden, etwa bei der
+                      Erstellung visueller Inhalte wie Bilder, Videos, Flyer
+                      oder Poster, bei der Erstellung von Audioinhalten, beim
+                      Brainstorming oder bei der Entwicklung von pädagogischen
+                      Inhalten. In diesem Zusammenhang können etwa DALL-E, Sora,
+                      Midjourney, NotebookLM oder Canva verwendet werden.
+                      Darüber hinaus eröffnen KI-Tools neue Möglichkeiten der
+                      Kommunikation mit Adressat:innen.
+                    </p>
+
+                    <h3 class="h5 mb-2">
+                      Anwendung in Österreich (Stand: Februar 2025)
+                    </h3>
+                    <ul class="mb-3">
+                      <li>
+                        Für die Erstellung von Content werden generative
+                        KI-Tools genutzt.
+                      </li>
+                      <li>
+                        Es werden in der Regel allgemein zugängliche Tools
+                        verwendet, die nicht spezifisch für die Soziale Arbeit
+                        entwickelt wurden.
+                      </li>
+                      <li>
+                        Organisationsspezifische generative KI-Tools fehlen
+                        weitgehend.
+                      </li>
+                    </ul>
+
+                    <h3 class="h5 mb-2">Potenziale</h3>
+                    <ul class="mb-3">
+                      <li>
+                        KI generierte Inhalte können auf die Bedürfnisse und die
+                        Lebenswelten verschiedener Adressat:innen abgestimmt
+                        werden, z.B. durch die Anpassung der Sprache (etwa an
+                        die Jugendsprache). Zudem kann die Reichweite erhöht
+                        werden.
+                      </li>
+                      <li>
+                        KI-Tools können die Teilhabe von Adressat:innen fördern,
+                        indem Inhalte multimedial aufbereitet und komplexe
+                        Inhalte einfach erklärt werden.
+                      </li>
+                    </ul>
+
+                    <h3 class="h5 mb-2">Grenzen</h3>
+                    <ul class="mb-0">
+                      <li>
+                        Der ungleiche Zugang zu KI-Tools kann den Digital Divide
+                        verstärken. Es besteht die Gefahr Privilegien und
+                        Ausschlüsse zu reproduzieren. Da KI-Tools auf lernenden
+                        Modellen basieren, fehlt zudem die Perspektive
+                        derjenigen, die keinen Zugang zu dieser Technologie
+                        haben. Auch zeigt sich ein Generationenkonflikt in der
+                        Nutzung von KI-Tools.
+                      </li>
+                      <li>
+                        Es besteht die Gefahr einer zu starken Vereinfachung von
+                        komplexen Inhalten sowie der Verbreitung von
+                        Halluzinationen und falschen Fakten, wenn KI generierte
+                        Inhalte nicht von Fach- oder Führungskräften überprüft
+                        werden (Human-in-the-Loop).
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Application Field 2 -->
+                <div class="card border-0 shadow-sm mb-4 bg-faded-warning">
+                  <div class="card-body p-4">
+                    <h2 class="h4 mb-3">
+                      Anwendungsfeld 2: Dokumentation, Administration &
+                      Berichtswesen
+                    </h2>
+
+                    <h3 class="h5 mb-2">Worum geht's?</h3>
+                    <p class="mb-3">
+                      Fachkräfte in der Sozialen Arbeit müssen Fälle verwalten,
+                      Dokumentationen führen und Berichte erstellen. Das ist ein
+                      wichtiger Teil ihrer Arbeit und hilft dabei, die Qualität
+                      und Professionalität zu sichern. KI-Tools können einen
+                      wesentlichen Beitrag zu diesen professionellen
+                      Schreibtätigkeiten leisten. Neben der Unterstützung bei
+                      der Erstellung von Berichten können KI-Tools auch bei der
+                      Analyse von Dokumentationen und Berichten helfen.
+                    </p>
+
+                    <h3 class="h5 mb-2">
+                      Anwendung in Österreich (Stand: Februar 2025)
+                    </h3>
+                    <ul class="mb-3">
+                      <li>
+                        KI-Tools werden bereits bei der Erstellung von Berichten
+                        und Dokumentationen, bei der Informationssuche und
+                        Recherche sowie bei Übersetzungen eingesetzt.
+                      </li>
+                      <li>
+                        Fachkräfte greifen dabei auf die allgemein zugänglichen
+                        Tools zurück.
+                      </li>
+                      <li>
+                        Organisationsspezifische generative KI-Tools fehlen
+                        weitgehend.
+                      </li>
+                      <li>
+                        Die aktuell relevantesten Anwendungen sind: Copilot,
+                        ChatGPT, Gemini (Textgenerierung), Elicit, Semantic
+                        Scholar, Perplexity (Recherche) und DeepL Write
+                        (Textbearbeitung).
+                      </li>
+                    </ul>
+
+                    <h3 class="h5 mb-2">Potenziale</h3>
+                    <ul class="mb-3">
+                      <li>
+                        Die Qualität der Berichte wird durch den Einsatz
+                        generativer KI-Tools weitgehend unabhängig von der
+                        Schreibkompetenz der jeweiligen Fachkräfte.
+                      </li>
+                      <li>
+                        (Zwischen-)Berichte können effizient und effektiv
+                        erstellt werden.
+                      </li>
+                      <li>
+                        Mit Hilfe von regelbasierten KI-Tools können Dokumente
+                        systematisch analysiert und Wissen extrahiert werden.
+                        Dadurch können beispielsweise typische Abläufe von
+                        Aktivitäten und Ereignissen sichtbar werden.
+                      </li>
+                    </ul>
+
+                    <h3 class="h5 mb-2">Grenzen</h3>
+                    <ul class="mb-0">
+                      <li>
+                        Die Erstellung eines Berichts erfordert die genaue
+                        Auseinandersetzung und Reflexion z.B. mit einem Fall
+                        oder einem Thema. Wenn hierbei KI-Tools eingesetzt
+                        werden, verringern sich die Möglichkeiten der Reflexion.
+                      </li>
+                      <li>
+                        Implizites Wissen und subjektive Erfahrungen von
+                        Fachkräften können bei KI erstellten Berichten nicht
+                        berücksichtigt werden.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Application Field 3 -->
+                <div class="card border-0 shadow-sm mb-4 bg-faded-primary">
+                  <div class="card-body p-4">
+                    <h2 class="h4 mb-3">
+                      Anwendungsfeld 3: Chatbots in der Beratung
+                    </h2>
+
+                    <h3 class="h5 mb-2">Worum gehts?</h3>
+                    <p class="mb-3">
+                      In der Kinder- und Jugendarbeit kann der Einsatz von
+                      Chatbots bestehende Informations- und Beratungsangebote
+                      ergänzen. Unter einem Chatbot versteht man ein System, mit
+                      dem ein:e Benutzer:in einen Dialog führen kann ('chat')
+                      und das bestimmte Aufgaben autonom erledigen kann ('bot').
+                      Chatbot ist jedoch nicht gleich Chatbot: Je nach
+                      technologischem Ansatz können Chatbots unterschiedliche
+                      Aufgaben erfüllen. Regelbasierte Chatbots reagieren auf
+                      vordefinierte Eingabemuster und halten sich strikt an
+                      vorprogrammierte Antworten und Regeln. Fortgeschrittene
+                      Systeme wie ChatGPT verwenden Large Language Models
+                      (LLMs). Diese LLMs können Interaktionen wesentlich
+                      flexibler gestalten. Sie sind in der Lage, neue Inhalte zu
+                      generieren oder aus Interaktionen zu lernen. Chatbots in
+                      der Beratung befinden sich derzeit noch in einem frühen
+                      Entwicklungsstadium und kombinieren in der Regel
+                      regelbasierte Chatbots mit KI-Elementen.
+                    </p>
+
+                    <h3 class="h5 mb-2">
+                      Anwendung in Österreich (Stand: Februar 2025)
+                    </h3>
+                    <ul class="mb-3">
+                      <li>
+                        Es werden vor allem regelbasierte Chatbots zur
+                        Informationsbereitstellung und zur Orientierung für
+                        Adressat:innen angeboten.
+                      </li>
+                      <li>
+                        Nach einer ersten Vorabberatung durch den regelbasierten
+                        Chatbot werden die Adressat:innen an Fachkräfte
+                        weitergeleitet.
+                      </li>
+                    </ul>
+
+                    <h3 class="h5 mb-2">Potenziale</h3>
+                    <ul class="mb-3">
+                      <li>
+                        Wenn der Einsatz von Chatbots gezielt und situativ
+                        erfolgt, beispielsweise für einfache Anfragen oder bei
+                        Anfragen außerhalb der regulären Beratungszeiten, können
+                        Fachkräfte entlastet werden.
+                      </li>
+                      <li>
+                        Chatbots sind rund um die Uhr verfügbar und ermöglichen
+                        so den Adressat:innen, jederzeit niedrigschwellig
+                        Informationen und Unterstützung zu erhalten.
+                      </li>
+                    </ul>
+
+                    <h3 class="h5 mb-2">Grenzen</h3>
+                    <ul class="mb-0">
+                      <li>
+                        Regelbasierte Chatbots sind in ihrer Flexibilität und in
+                        ihren Einsatzmöglichkeiten begrenzt.
+                      </li>
+                      <li>
+                        Komplexe oder sehr emotionale Anfragen sind für Chatbots
+                        nicht geeignet und müssen zeitnah an eine qualifizierte
+                        Fachkraft weitergeleitet werden.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Application Field 4 -->
+                <div class="card border-0 shadow-sm mb-4 bg-faded-warning">
+                  <div class="card-body p-4">
+                    <h2 class="h4 mb-3">Anwendungsfeld 4: Fallarbeit</h2>
+
+                    <h3 class="h5 mb-2">Worum geht's?</h3>
+                    <p class="mb-3">
+                      In der Kinder- und Jugendarbeit können KI-Anwendungen in
+                      der Arbeit mit Adressat:innen in vier aufeinander
+                      folgenden Phasen eingesetzt werden:
+                    </p>
+                    <p class="mb-3">BILD</p>
+                    <p class="mb-3">
+                      Anamnese bezieht sich auf den systematischen Prozess der
+                      Erhebung von Informationen über die Lebenssituation von
+                      Adressat:innen. Darauf aufbauend wird eine Diagnose
+                      erstellt, die als Grundlage für die Festlegung der
+                      notwendigen Unterstützungsmaßnahmen, die sogenannte
+                      Hilfeplanung, dient.
+                    </p>
+                    <p class="mb-3">
+                      Die Risiko- und Gefährdungseinschätzung, das so genannte
+                      Predictive Risk Modelling, verfolgt das Ziel,
+                      risikobehaftete Lebenssituationen und risikoreiches
+                      Verhalten zu identifizieren, um zukünftiges Verhalten oder
+                      die Entwicklung sozialer Verhältnisse abschätzen zu
+                      können. Es wird beispielsweise im Bereich der
+                      Kindeswohlgefährdung eingesetzt.
+                    </p>
+
+                    <h3 class="h5 mb-2">
+                      Anwendung in Österreich (Stand: Februar 2025)
+                    </h3>
+                    <ul class="mb-3">
+                      <li>
+                        KI-Tools werden zur Fallbearbeitung aktuell eher selten
+                        eingesetzt, am ehesten für die Hilfeplanung.
+                      </li>
+                      <li>
+                        Es werden vor allem regelbasierte Tools verwendet, da
+                        die Musterkennung und der Vergleich zu anderen Fällen im
+                        Vordergrund stehen.
+                      </li>
+                    </ul>
+
+                    <h3 class="h5 mb-2">Potenziale</h3>
+                    <ul class="mb-3">
+                      <li>
+                        KI-Tools ermöglichen präventives Arbeiten durch eine
+                        frühzeitige Risikoerkennung.
+                      </li>
+                      <li>
+                        Die Möglichkeit des Vergleichs verschiedener Fälle
+                        erlaubt eine differenzierte Zielgruppenbestimmung und,
+                        darauf aufbauend, die Berücksichtigung individueller
+                        Bedürfnisse.
+                      </li>
+                      <li>
+                        Bei regelbasierten Tools ist es grundsätzlich denkbar,
+                        Vorurteilen auf die Spur zu kommen und zu minimieren.
+                        Voraussetzung dafür sind transparente Datensätze und
+                        Algorithmen.
+                      </li>
+                      <li>
+                        Durch den Einsatz von KI-Tools werden vielfältige
+                        Lösungswege sichtbar. Dies kann Fachkräfte etwa bei der
+                        Hilfeplanung unterstützen.
+                      </li>
+                    </ul>
+
+                    <h3 class="h5 mb-2">Grenzen</h3>
+                    <ul class="mb-0">
+                      <li>
+                        Generative KI-Tools können aktuell aus rechtlichen
+                        Gründen in Österreich nicht in der Fallarbeit eingesetzt
+                        werden.
+                      </li>
+                      <li>
+                        Regelbasierte KI-Tools sollten in der Fallarbeit nur als
+                        Ideengeberin oder Kontrollinstrument eingesetzt werden
+                        und nicht selbstständige Entscheidungen treffen können.
+                      </li>
+                      <li>
+                        Aktuell fehlt eine gemeinsame, österreichweite Datenbank
+                        als Grundlage für die Entwicklung eigener Tools. Dies
+                        würde den Datenaustausch zwischen Organisationen
+                        voraussetzten.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <p class="mb-0 fst-italic">
+                  Zitiervorschlag: Susanne Sackl-Sharif, Sabine Klinger, Andrea
+                  Mayr & Esther Brossmann-Handler (28.02.2025). KI in der
+                  Sozialen Arbeit. Vier (zukünftige) Anwendungsfelder.
+                  https://digitalesozialearbeit.github.io/ai-socialwork/ai-application-areas
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (wird inkludiert)-->
+    <div data-include="footer.html"></div>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>

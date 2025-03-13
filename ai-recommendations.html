@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>KI in der Sozialen Arbeit - Handlungsempfehlungen</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="KI in der Sozialen Arbeit - Handlungsempfehlungen und Reflexionsfragen"
+    />
+    <meta
+      name="keywords"
+      content="KI, Soziale Arbeit, Digitalisierung, Handlungsempfehlungen"
+    />
+    <meta name="author" content="Digital Humanities Craft" />
+    <meta name="author" content="Susanne Sackl-Sharif" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="KI in der Sozialen Arbeit - Handlungsempfehlungen"
+    />
+    <meta
+      property="og:description"
+      content="KI in der Sozialen Arbeit - Handlungsempfehlungen und Reflexionsfragen"
+    />
+    <meta property="og:image" content="KI in der Sozialen Arbeit" />
+    <meta property="og:url" content="KI in der Sozialen Arbeit" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="KI in der Sozialen Arbeit - Handlungsempfehlungen"
+    />
+    <meta
+      name="twitter:description"
+      content="KI in der Sozialen Arbeit - Handlungsempfehlungen und Reflexionsfragen"
+    />
+    <meta name="twitter:image" content="KI in der Sozialen Arbeit" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Includes + Theme Switcher -->
+    <script src="assets/js/data-includes.js"></script>
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon.png" />
+
+    <!-- Vendor Styles -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/boxicons/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"
+    />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: 0.6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Header (wird inkludiert)-->
+      <div data-include="header.html"></div>
+
+      <section class="container mb-5 pt-4 pb-2 py-mg-4">
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- Main Title -->
+            <h1 class="h2 mb-4">
+              KI in der Sozialen Arbeit: Handlungsempfehlungen und
+              Reflexionsfragen
+            </h1>
+
+            <!-- Project Introduction -->
+            <div class="card border-0 shadow-sm mb-4 p-4">
+              <div class="card-body p-0">
+                <p class="mb-4">
+                  Auf dieser Seite geben wir einen Überblick über von uns
+                  entwickelte Handlungsempfehlungen zur nachhaltigen
+                  Implementierung von KI-Tools in Organisationen der Sozialen
+                  Arbeit. Eine ausführliche Version der Handlungsempfehlungen zu
+                  den Themen Bestandsaufnahme, KI-Strategie sowie Digital / AI
+                  Literacies inklusive Reflexionsfragen für Führungskräfte kann
+                  im Downloadbereich als PDF
+                  heruntergeladen werden.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bestandsaufnahme Section -->
+            <div class="card border-0 shadow-sm mb-4 p-4">
+              <div class="card-body p-0">
+                <h2 class="h3 mb-4">Bestandsaufnahme</h2>
+                <ol class="mb-0">
+                  <li class="mb-3">
+                    <strong>Prozessanalyse:</strong> In einem ersten Schritt
+                    sollte geklärt werden, welche Ziele in der Kinder- und
+                    Jugendarbeit verfolgt werden und wie KI-Tools Organisationen
+                    und Fachkräfte bei der Erreichung dieser Ziele unterstützen
+                    können.
+                  </li>
+                  <li class="mb-3">
+                    <strong>Technikfolgenabschätzung:</strong> Für eine
+                    nachhaltige Implementierung von KI-Tools ist es notwendig,
+                    eine Technikfolgenabschätzung durchzuführen, um nicht nur
+                    Potenziale, sondern auch Grenzen des KI-Einsatzes im Blick
+                    zu behalten.
+                  </li>
+                  <li class="mb-3">
+                    <strong>Haltungen in der Organisation:</strong> Die
+                    Reflexion der Einstellungen und Werte von Fach- und
+                    Führungskräften gegenüber KI ist eine wesentliche
+                    Voraussetzung, um zu entscheiden, wo die
+                    Organisationsmitglieder abzuholen sind.
+                  </li>
+                  <li class="mb-0">
+                    <strong>Digital / AI Literacies:</strong> In gemeinsamen
+                    Workshops oder einer Fragebogenerhebung sollte festgestellt
+                    werden, über welche Digital / AI Literacies Fachkräfte
+                    verfügen und welche ihnen fehlen.
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <!-- KI-Strategie Section -->
+            <div class="card border-0 shadow-sm mb-4 p-4 bg-light">
+              <div class="card-body p-0">
+                <h2 class="h3 mb-4">KI-Strategie</h2>
+                <p class="mb-0">
+                  Neben einer Bestandsaufnahme ist es wichtig, eine KI-Strategie
+                  für die Organisation zu entwickeln, um KI-Tools effizient und
+                  nachhaltig einzusetzen. Diese sollte allen Mitgliedern der
+                  Organisation zur Verfügung gestellt und in regelmäßigen
+                  Abständen aktualisiert werden. Detaillierte Ausführungen zu
+                  den einzelnen Themen befinden sich im PDF-Dokument "Reflexionsfragen für eine nachhaltige KI-Implementierung".
+                </p>
+                <img
+                    src="assets/img/Strategie.png"
+                    class="img-fluid rounded-3"
+                    alt="AI strategie illustration"
+                  />
+              </div>
+            </div>
+            
+
+            <!-- Einführung neuer KI-Tools Section -->
+            <div class="card border-0 shadow-sm mb-4 p-4">
+              <div class="card-body p-0">
+                <h2 class="h3 mb-4">Einführung neuer KI-Tools</h2>
+
+                <h3 class="h5 mb-3">Auswahl von geeigneten Tools</h3>
+                <p class="mb-3">
+                  Bei Entscheidung über die Auswahl von geeigneten KI-Tools
+                  spielen folgende Faktoren eine entscheidende Rolle: Kosten,
+                  Komplexität und Anwendungszweck. Für Organisationen der
+                  Sozialen Arbeit gibt es in diesem Zusammenhang die
+                  nachfolgenden Punkte zu bedenken.
+                </p>
+                <ul class="mb-4">
+                  <li class="mb-3">
+                    <strong>Self-Hosting:</strong> Self-Hosting bedeutet, dass
+                    eine Organisation KI-Modelle auf eigener Hardware oder in
+                    einer privaten Cloud-Umgebung betreibt, anstatt auf externe
+                    Dienste zu zugreifen. Dies bietet maximale Kontrolle, ist
+                    aber mit erheblichen Infrastruktur- und Personalkosten
+                    verbunden und somit für Organisationen der Sozialen Arbeit
+                    meistens ungeeignet.
+                  </li>
+                  <li class="mb-3">
+                    <strong>Generative KI-Tools:</strong> eignen sich in der
+                    Sozialen Arbeit besonders für Textgenerierung,
+                    Übersetzungen, Zusammenfassungen und ähnliche Aufgaben. Für
+                    diesen Bereich empfehlen wir insbesondere Customised Tools.
+                    Die zugrunde liegenden Modelle (z.B. Llame, OpenAI) können
+                    mittels Fine-Tuning kostengünstig an die Bedürfnisse der
+                    Organisationen angepasst werden.
+                  </li>
+                  <li class="mb-0">
+                    <strong>Regelbasierte Tools</strong> eigenen sich für
+                    strukturierte Entscheidungsprozesse, z.B. für die Anamnese,
+                    Diagnose, Hilfeplanung oder Predictive Risk Modelling.
+                  </li>
+                </ul>
+
+                <h3 class="h5 mb-3">
+                  Einführung neuer KI-Tools auf Basis des
+                  Human-in-the-Loop-Ansatzes
+                </h3>
+                <p class="mb-3">
+                  Bei der Einführung und Evaluierung neuer KI-Tools ist es
+                  wichtig, dies auf Basis des Human-in-the-Loop-Ansatzes
+                  durchzuführen. So sollte KI stets in Interaktion mit Menschen
+                  getestet, überwacht, optimiert und korrigiert werden.
+                </p>
+                <ul class="mb-0">
+                  <li class="mb-3">
+                    <strong>Testphase:</strong> Vor der konkreten Einführung
+                    neuer KI-Tools sollten diese gemeinsam mit Fachkräften
+                    getestet werden (insbesondere in den Bereichen Chatbots und
+                    Fallarbeit). Die Fachkräfte sollten hierbei KI-Ergebnisse
+                    mit ihren Bewertungen abgleichen.
+                  </li>
+                  <li class="mb-0">
+                    <strong>Evaluierung:</strong> Menschliche Intelligenz sollte
+                    auch anschließend in alle KI-Prozesse eingebunden bleiben,
+                    um sicher zu stellen, dass die von der KI generierten
+                    Ergebnisse korrekt, vertrauenswürdig und ethisch vertretbar
+                    sind.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Digital / AI Literacies Section -->
+            <div class="card border-0 shadow-sm mb-4 p-4 bg-light">
+              <div class="card-body p-0">
+                <h2 class="h3 mb-4">Digital / AI Literacies</h2>
+                <p class="mb-4">
+                  Seit Februar 2025 verpflichtet der
+                  <a href="#" class="text-decoration-underline"
+                    >AI-Act der Europäischen Union</a
+                  >
+                  Organisationen dazu, sicherzustellen, dass ihre
+                  Mitarbeiter:innen kompetent im Umgang mit KI sind. So sollten
+                  auch Fachkräfte der Sozialen Arbeit realistisch einschätzen
+                  können, wozu KI in der Lage ist und wo hier die Grenzen
+                  liegen.
+                </p>
+                <ol class="mb-0">
+                  <li class="mb-3">
+                    <strong>Wissen vermitteln:</strong> Fachkräfte sollen
+                    lernen, wie generative KI und regelbasierte Tools
+                    funktionieren und für unterschiedliche
+                    <a href="#" class="text-decoration-underline"
+                      >Anwendungsbereiche</a
+                    >
+                    effektiv genutzt werden können. Sie sollen außerdem über
+                    juridische Grundlagen informiert sein.
+                  </li>
+                  <li class="mb-3">
+                    <strong>Praxis ermöglichen:</strong> Fachkräfte sollen
+                    verschiedene Tools ausprobieren und grundlegende Techniken
+                    für den Umgang mit KI-Tools (z.B. Prompting) erlernen.
+                    Hierzu gehören auch das gemeinsame Interpretieren und
+                    Bewerten von KI-Ergebnissen. Sinnvoll wäre hier ein
+                    Szenario-basiertes Training, in dem Fachkräfte typische
+                    Fehlerfälle durchspielen.
+                  </li>
+                  <li class="mb-0">
+                    <strong>Reflexion fördern:</strong> Fachkräfte sollen für
+                    <a href="#" class="text-decoration-underline"
+                      >Potenziale und Herausforderungen von KI-Tools</a
+                    >
+                    sensibilisiert werden. Hierzu zählt insbesondere auch die
+                    Förderung einer geschlechter- und diversitätssensiblen
+                    Perspektive.
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <!-- Citation Section -->
+            <p class="mb-4 fst-italic">
+              Zitiervorschlag: Susanne Sackl-Sharif, Christian Steiner, Sabine
+              Klinger, Esther Brossmann-Handler &amp; Andrea Mayr (28.02.2025). KI
+              in der Sozialen Arbeit. Handlungsempfehlungen und
+              Reflexionsfragen.
+              https://digitalesozialearbeit.github.io/ai-socialwork/ai-recommendations
+            </p>
+          </div>
+
+          <!-- Sidebar with Download Area -->
+          <div class="col-lg-4">
+            <div class="sticky-top" style="top: 105px">
+              <!-- Download Area Card -->
+              <div class="card border-0 shadow-sm mb-4 bg-faded-primary">
+                <div class="card-body p-4">
+                  <h3 class="h5 mb-4">Downloadbereich</h3>
+
+                  <div
+                    class="d-flex align-items-center mb-3 p-3 border rounded bg-white"
+                  >
+                    <i class="bx bxs-file-pdf fs-3 text-danger me-3"></i>
+                    <div>
+                      <h4 class="h6 mb-1">
+                        Reflexionsfragen für eine nachhaltige KI-Implementierung
+                      </h4>
+                      <p class="mb-0 fs-sm text-muted">PDF, 420 KB</p>
+                    </div>
+                    <a href="#" class="btn btn-sm btn-primary ms-auto">
+                      <i class="bx bx-download fs-lg me-1"></i>
+                      PDF
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (wird inkludiert)-->
+    <div data-include="footer.html"></div>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>

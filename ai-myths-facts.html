@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>KI in der Sozialen Arbeit: Mythen und Fakten</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="KI in der Sozialen Arbeit: Mythen und Fakten"
+    />
+    <meta
+      name="keywords"
+      content="KI, Soziale Arbeit, Mythen, Fakten, Digitalisierung"
+    />
+    <meta name="author" content="Digital Humanities Craft" />
+    <meta name="author" content="Susanne Sackl-Sharif" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="KI in der Sozialen Arbeit: Mythen und Fakten"
+    />
+    <meta
+      property="og:description"
+      content="KI in der Sozialen Arbeit: Mythen und Fakten"
+    />
+    <meta
+      property="og:image"
+      content="KI in der Sozialen Arbeit: Mythen und Fakten"
+    />
+    <meta
+      property="og:url"
+      content="KI in der Sozialen Arbeit: Mythen und Fakten"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="KI in der Sozialen Arbeit: Mythen und Fakten"
+    />
+    <meta
+      name="twitter:description"
+      content="KI in der Sozialen Arbeit: Mythen und Fakten"
+    />
+    <meta
+      name="twitter:image"
+      content="KI in der Sozialen Arbeit: Mythen und Fakten"
+    />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Includes + Theme Switcher -->
+    <script src="assets/js/data-includes.js"></script>
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon.png" />
+
+    <!-- Vendor Styles -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/boxicons/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"
+    />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: 0.6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Header (wird inkludiert)-->
+      <div data-include="header.html"></div>
+
+      <section class="container mb-5 pt-4 pb-2 py-mg-4">
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <!-- Main Title -->
+            <h1 class="h2 mb-4">
+              KI in der Sozialen Arbeit. Mythen und Fakten
+            </h1>
+
+            <!-- Project Description -->
+            <div class="card border-0 shadow-sm mb-4 p-4">
+              <div class="card-body p-0">
+                <p class="mb-4">
+                  Über KI-Tools und deren Fähigkeiten gibt es zahlreiche Mythen
+                  und Fehleinschätzungen, so auch im Feld der Kinder- und
+                  Jugendarbeit. Daher ist es wichtig, diese zu entkräften und
+                  ein realistisches Bild von den Potenzialen und Grenzen der KI
+                  zu zeichnen. Auf dieser Seite widmen wir uns daher vier gängigen Mythen, die wir in unserer Arbeit mit Fachkräften der Kinder- und Jugendarbeit entdecken konnten und unterziehen sie einem Faktencheck.
+                </p>
+
+                <!-- Myths and Facts Section -->
+                <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+                  <div class="col">
+                    <div class="card h-100 border-0 shadow-sm bg-secondary">
+                      <div class="card-body p-4">
+                        <h2 class="h5 mb-3">
+                          <i class="bx bx-error-circle me-2"></i>
+                          Mythos 1: KI hat keine Erinnerungslücken und macht
+                          keine Fehler
+                        </h2>
+                        <p class="fw-medium mb-2">Faktencheck:</p>
+                        <p class="mb-0">
+                          KI macht Fehler und hat Erinnerungslücken. Anders als
+                          eine Suchmaschine, die (im Idealfall) existierende
+                          Quellen verlinkt und Informationen abruft, können
+                          KI-Tools und Large Language Modells (LLMs)
+                          Zusammenhänge generativ kombinieren und dabei
+                          sogenannte 'Halluzinationen' erzeugen oder Inhalte
+                          übersehen. Halluzinationen beziehen sich auf KI
+                          generierte Inhalte, die zwar realistisch erscheinen,
+                          aber mangelnde faktische Richtigkeit aufweisen.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card h-100 border-0 shadow-sm bg-faded-warning">
+                      <div class="card-body p-4">
+                        <h2 class="h5 mb-3">
+                          <i class="bx bx-heart me-2"></i>
+                          Mythos 2: KI hat keine Gefühle oder Empfindungen
+                        </h2>
+                        <p class="fw-medium mb-2">Faktencheck:</p>
+                        <p class="mb-0">
+                          Der Mythos, dass KI keine Emotionen hat, basiert auf
+                          einem wahren Kern: Tatsächlich hat KI keine eigenen
+                          Gefühle oder subjektive Empfindungen. Sie können
+                          jedoch menschliche Emotionen analysieren und in ihren
+                          Interaktionen scheinbar darauf reagieren. Dies kann zu
+                          einer Verstärkung der emotionalen Erfahrungen bei
+                          Menschen führen, die mit KI-Tools interagieren. KI
+                          können somit auf unterschiedliche Weise (z.B.
+                          personalisierte Inhalte und Einstellungen) menschliche
+                          Emotionen beeinflussen und diese verstärken.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card h-100 border-0 shadow-sm bg-faded-info">
+                      <div class="card-body p-4">
+                        <h2 class="h5 mb-3">
+                          <i class="bx bx-search me-2"></i>
+                          Mythos 3: KI trifft transparente Entscheidungen
+                        </h2>
+                        <p class="fw-medium mb-2">Faktencheck:</p>
+                        <p class="mb-0">
+                          Regelbasierte KI-Tools bauen auf vordefinierten Regeln
+                          auf, was die Nutzer:innen in die Lage versetzt, die
+                          Entscheidungsprozesse leicht nachzuvollziehen. Im
+                          Gegensatz dazu arbeitet die generative KI auf eine Art
+                          und Weise, die unverständlich bleibt. Diese
+                          Intransparenz ergibt sich aus der Komplexität der
+                          zugrundeliegenden Deep-Learning-Modelle, die aus
+                          riesigen Datenmengen lernen und Muster erkennen. Dies
+                          führt zu einem Dilemma: Obwohl generative KI-Tools
+                          Ergebnisse liefern, bleibt die Frage unbeantwortet,
+                          wie diese Ergebnisse zustande kommen werden. Diese
+                          Prozesse generativer KI sind eine Black Box.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card h-100 border-0 shadow-sm bg-faded-warning">
+                      <div class="card-body p-4">
+                        <h2 class="h5 mb-3">
+                          <i class="bx bx-star me-2"></i>
+                          Mythos 4: KI trifft neutrale und objektive
+                          Entscheidungen
+                        </h2>
+                        <p class="fw-medium mb-2">Faktencheck:</p>
+                        <p class="mb-0">
+                          Dieser Mythos basiert auf der Fehleinschätzung, dass
+                          KI-Tools frei von persönlichen Meinungen agieren.
+                          Dabei wird häufig übersehen, dass KI und andere
+                          Technologien von Menschen gestaltet werden.
+                          Technologieentwickler:innen bringen ihre
+                          Alltagserfahrungen, Werte und Vorstellungen ein.
+                          Dieser implizite Selbstbezug ('I-Methodology'), mit
+                          dem sich die Technologiegestalter:innen als
+                          Nutzer:innen imaginieren, schreibt sich somit in die
+                          Algorithmen ein und prägt deren Arbeitsweise.
+                          Algorithmen sind daher nicht objektiv, sie
+                          reproduzieren vielmehr bestehende stereotype
+                          Rollenbilder und soziale Ungleichheit. Zudem ist die
+                          Datengrundlage in der Regel nicht neutral und
+                          beinhaltet Vorurteile und stereotype Zuschreibungen.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="mb-0 fst-italic">
+                  Zitiervorschlag: Sabine Klinger, Susanne Sackl-Sharif, Esther
+                  Brossmann-Handler &amp; Andrea Mayr (28.02.2025). KI in der
+                  Sozialen Arbeit. Mythen und Fakten.
+                  https://digitalesozialearbeit.github.io/ai-socialwork/ai-myths-facts
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (wird inkludiert)-->
+    <div data-include="footer.html"></div>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
