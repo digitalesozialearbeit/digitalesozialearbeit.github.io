@@ -1,0 +1,9 @@
+# robots.txt for digitalesozialearbeit.github.io
+User-agent: *
+Allow: /
+
+# Note about previous website
+# Prior location was at digital-at-socialwork.uni-graz.at
+
+# Sitemap location
+Sitemap: https://digitalesozialearbeit.github.io/sitemap.xml
