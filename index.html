@@ -6,27 +6,67 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Soziale Arbeit &amp; Digitalisierung" />
-    <meta name="keywords" content="Soziale Arbeit &amp; Digitalisierung" />
-    <meta name="author" content="Digital Humanities Craft" />
-    <meta name="author" content="Susanne Sackl-Sharif" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Soziale Arbeit &amp; Digitalisierung" />
+    <!-- Author Meta Tags -->
     <meta
-      property="og:description"
-      content="Soziale Arbeit &amp; Digitalisierung"
+      name="author"
+      content="Sabine Klinger, Andrea Mayr, Susanne Sackl-Sharif, Esther Brossmann-Handler, Christian Steiner"
     />
-    <meta property="og:image" content="Soziale Arbeit &amp; Digitalisierung" />
-    <meta property="og:url" content="Soziale Arbeit &amp; Digitalisierung" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Soziale Arbeit &amp; Digitalisierung" />
     <meta
-      name="twitter:description"
-      content="Soziale Arbeit &amp; Digitalisierung"
+      name="dc.creator"
+      content="Sabine Klinger, Andrea Mayr, Susanne Sackl-Sharif, Esther Brossmann-Handler, Christian Steiner"
     />
-    <meta name="twitter:image" content="Soziale Arbeit &amp; Digitalisierung" />
+
+    <!-- Individual Author Information - Dublin Core format -->
+    <meta
+      name="dc.contributor"
+      content="Sabine Klinger - Universität Graz, Institut für Erziehungs- und Bildungswissenschaft"
+    />
+    <meta name="dc.contributor" content="Andrea Mayr - Universität Graz" />
+    <meta
+      name="dc.contributor"
+      content="Susanne Sackl-Sharif - Universität Graz"
+    />
+    <meta
+      name="dc.contributor"
+      content="Esther Brossmann-Handler - Frauen- und Mädchenberatung Hartberg-Fürstenfeld"
+    />
+    <meta
+      name="dc.contributor"
+      content="Christian Steiner - Digital Humanities Craft"
+    />
+
+    <!-- Author Descriptions (can be used by some specialized indexing services) -->
+    <meta
+      name="author.description"
+      lang="de"
+      content="Dr. Sabine Klinger ist promovierte Erziehungs- und Bildungswissenschaftlerin sowie Geschlechterforscherin am Institut für Erziehungs- und Bildungswissenschaft der Universität Graz, Arbeitsbereich Sozialpädagogik."
+    />
+    <meta
+      name="author.description"
+      lang="de"
+      content="Dr. Andrea Mayr ist promovierte Erziehungs- und Bildungswissenschaftlerin und akademisch ausgebildete Sozialpädagogin."
+    />
+    <meta
+      name="author.description"
+      lang="de"
+      content="Dr. Susanne Sackl-Sharif ist promovierte Soziologin und Musikwissenschaftlerin."
+    />
+    <meta
+      name="author.description"
+      lang="de"
+      content="Esther Brossmann-Handler ist Sozialarbeiterin und Sozialpädagogin, tätig in der Frauen- und Mädchenberatung Hartberg-Fürstenfeld."
+    />
+    <meta
+      name="author.description"
+      lang="de"
+      content="Christian Steiner ist Experte für Digital Humanities und Webentwicklung bei Digital Humanities Craft."
+    />
+    <meta
+      name="keywords"
+      content="digital-at-socialwork.uni-graz.at, digital social work, Universität Graz, KI Soziale Arbeit, Soziale Arbeit und Digitalisierung"
+    />
+    <meta name="language" content="de" />
+    <link rel="canonical" href="https://digitalesozialearbeit.github.io/" />
 
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -137,6 +177,70 @@
         };
       })();
     </script>
+    <!-- SEO Script -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Soziale Arbeit und Digitalisierung",
+        "alternateName": "digital-at-socialwork.uni-graz.at",
+        "url": "digitalesozialearbeit.github.io"
+      }
+    </script>
+    <!-- Structured Data for Research Project -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ResearchProject",
+        "name": "Digitale Soziale Arbeit",
+        "description": "Forschungsprojekt zur Digitalisierung in der Sozialen Arbeit und KI-Einsatz in sozialen Diensten.",
+        "funder": {
+          "@type": "Organization",
+          "name": "Universität Graz"
+        },
+        "keywords": [
+          "Digitale Soziale Arbeit",
+          "KI in der Sozialen Arbeit",
+          "Digitalisierung"
+        ],
+        "location": {
+          "@type": "Place",
+          "name": "Universität Graz",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Graz",
+            "addressCountry": "AT"
+          }
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Sabine Klinger",
+            "affiliation": "Universität Graz, Institut für Erziehungs- und Bildungswissenschaft"
+          },
+          {
+            "@type": "Person",
+            "name": "Andrea Mayr",
+            "affiliation": "Universität Graz"
+          },
+          {
+            "@type": "Person",
+            "name": "Susanne Sackl-Sharif",
+            "affiliation": "Universität Graz"
+          },
+          {
+            "@type": "Person",
+            "name": "Esther Brossmann-Handler",
+            "affiliation": "Frauen- und Mädchenberatung Hartberg-Fürstenfeld"
+          },
+          {
+            "@type": "Person",
+            "name": "Christian Steiner",
+            "affiliation": "Digital Humanities Craft"
+          }
+        ]
+      }
+    </script>
   </head>
 
   <!-- Body -->
@@ -240,7 +344,7 @@
               <h2 class="pb-3 text-center">
                 Entdecken Sie unsere Hauptbereiche
               </h2>
-              <div class="row row-cols-1 row-cols-xl-2 g-4">
+              <div class="row row-cols-1 row-cols-lg-2 g-4">
                 <!-- Team & Projekte -->
                 <div class="col">
                   <div class="card h-100 border-0 shadow-sm p-md-2 p-lg-4">
@@ -364,32 +468,55 @@
                   </div>
                 </div>
 
-                <!-- Podcasts -->
-                <!-- <div class="col">
+                <!-- KI & Soziale Arbeit -->
+                <div class="col">
                   <div class="card h-100 border-0 shadow-sm p-md-2 p-lg-4">
+                    <h3 class="text-center mb-1 pt-lg-0 pt-4">
+                      KI &amp; Soziale Arbeit
+                    </h3>
                     <div class="card-body d-flex align-items-center">
                       <div
-                        class="bg-success shadow-success rounded-3 flex-shrink-0 p-4"
+                        class="bg-info shadow-info rounded-3 flex-shrink-0 p-3"
                       >
                         <img
-                          src="assets/img/DigiSocialWork-podcasts.png"
+                          src="assets/img/DigiSocialWork-future.png"
                           class="d-block m-1"
-                          width="70"
-                          alt="Zukunft Icon"
+                          width="80"
+                          alt="KI Icon"
                         />
                       </div>
                       <div class="ps-4 ms-lg-3 text-wrap overflow-hidden">
-                        <h3 class="mb-1 overflow-hidden">
-                          Podcasts &amp; Medienberichte
-                        </h3>
-                        <p class="mb-0">
-                          Entdecken Sie unsere Podcasts &amp; Medienberichte
-                        </p>
-                        <a href="/podcasts" class="stretched-link"></a>
+                        <div class="list-group list-group-flush">
+                          <a
+                            href="/ai-socialwork.html"
+                            class="list-group-item list-group-item-action"
+                            >Übersicht</a
+                          >
+                          <a
+                            href="/ai-myths-facts.html"
+                            class="list-group-item list-group-item-action"
+                            >Mythen &amp; Fakten</a
+                          >
+                          <a
+                            href="/ai-potentials-challenges.html"
+                            class="list-group-item list-group-item-action"
+                            >Potenziale &amp; Herausforderungen</a
+                          >
+                          <a
+                            href="/ai-application-areas.html"
+                            class="list-group-item list-group-item-action"
+                            >Anwendungsbereiche</a
+                          >
+                          <a
+                            href="/ai-recommendations.html"
+                            class="list-group-item list-group-item-action"
+                            >Empfehlungen für die Praxis</a
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div> -->
+                </div>
               </div>
             </div>
           </div>
