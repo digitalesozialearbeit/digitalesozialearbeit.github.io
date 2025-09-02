@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>Soziale Arbeit &amp; Digitalisierung</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Soziale Arbeit &amp; Digitalisierung" />
+    <meta name="keywords" content="Soziale Arbeit &amp; Digitalisierung" />
+    <meta name="author" content="Digital Humanities Craft" />
+    <meta name="author" content="Susanne Sackl-Sharif" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Soziale Arbeit &amp; Digitalisierung" />
+    <meta
+      property="og:description"
+      content="Soziale Arbeit &amp; Digitalisierung"
+    />
+    <meta property="og:image" content="Soziale Arbeit &amp; Digitalisierung" />
+    <meta property="og:url" content="Soziale Arbeit &amp; Digitalisierung" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Soziale Arbeit &amp; Digitalisierung" />
+    <meta
+      name="twitter:description"
+      content="Soziale Arbeit &amp; Digitalisierung"
+    />
+    <meta name="twitter:image" content="Soziale Arbeit &amp; Digitalisierung" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Includes + Theme Switcher -->
+    <script src="assets/js/data-includes.js"></script>
+
+    <!-- Favicon and Touch Icons -->
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon.png" />
+
+    <!-- Vendor Styles -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/boxicons/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"
+    />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: 0.6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Header (wird inkludiert)-->
+      <div data-include="header.html"></div>
+
+      <section class="container mb-5 pt-4 pb-2 py-mg-4">
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- Main Title -->
+            <h1 class="h2 mb-4">
+              Künstliche Intelligenz in der Sozialen Arbeit
+            </h1>
+
+            <!-- Project Description -->
+            <div class="card border-0 shadow-sm mb-4 p-4">
+              <div class="card-body p-0 d-flex align-items-start">
+                <img
+                  src="assets/img/Lampe.jpg"
+                  class="me-3"
+                  width="80"
+                  alt="Team Icon"
+                />
+                <p class="mb-4">
+                  Das Projekt
+                  <a
+                    href="https://digitalesozialearbeit.github.io/ai-youthwork"
+                    class="text-decoration-underline"
+                    target="_blank"
+                    >AI@youthwork</a
+                  >
+                  untersucht die Grenzen und Möglichkeiten des KI-Einsatzes in
+                  der Sozialen Arbeit, insbesondere in der Kinder- und
+                  Jugendarbeit. Auf Basis einer Technikfolgenabschätzung zielt
+                  es darauf ab, Zukunftsperspektiven zu entwickeln und das
+                  Bewusstsein für diese Technologien zu schärfen. Dazu wurden
+                  Interviews, Fragebogenerhebung und Design Labs mit
+                  Expert:innen und Fachkräften durchgeführt. Diese bilden die
+                  Grundlage für die Webseiten-Inhalte zum Thema Künstliche
+                  Intelligenz und Soziale Arbeit.
+                </p>
+              </div>
+            </div>
+
+            <!-- Technikfolgenabschätzung Section -->
+            <div class="card border-0 shadow-sm mb-4 p-4">
+              <div class="card-body p-0">
+                <h3 class="h5 mb-3">Technikfolgenabschätzung</h3>
+                <p class="mb-3">
+                  Die Technikfolgenabschätzung im Projekt bewertet die
+                  potenziellen Auswirkungen von KI, um fundierte Entscheidungen
+                  über ihren Einsatz zu ermöglichen. Folgende Themen wurden hierbei betrachtet:
+                </p>
+                <ul class="mb-3">
+                  <li>technische Leistungsfähigkeit</li>
+                  <li>gesellschaftliche, ethische und pädagogische Auswirkungen</li>
+                  <li>Geschlechter- und Diversitätsfragen</li>
+                  <li>ökologische und ökonomische Konsequenzen</li>
+                </ul>
+                <p class="mb-3">
+                  Bei der Nutzung von KI gilt es außerdem rechtliche
+                  Rahmenbedingungen zu berücksichtigen. Dazu zählen unter
+                  anderem die
+                  <a
+                    href="https://datenschutz-grundverordnung.eu/"
+                    class="text-decoration-underline"
+                    target="_blank"
+                    >Datenschutzgrundverordnung (DSGVO)</a
+                  >
+                  und der
+                  <a
+                    href="https://artificialintelligenceact.eu/de/"
+                    class="text-decoration-underline"
+                    target="_blank"
+                    >AI-Act</a
+                  >.
+                </p>
+                <h3 class="h5 mb-3">Ergebnisse</h3>
+                <p class="mb-0">
+                  Auf den folgenden Unterseiten sind unsere Hauptergebnisse zu
+                  Mythen und Fakten rund um das Thema KI, Potenziale und
+                  Herausforderungen von KI, Anwendungsbereiche (in Österreich)
+                  dargestellt. Darüber hinaus entwickelten wir wichtige Empfehlungen
+                  für die Praxis für eine nachhaltige KI-Implementierung.
+                </p>
+              </div>
+            </div>
+            <!-- Übersicht über Themen -->
+            <section class="container pb-5 mb-2 mb-md-4 mb-lg-5">
+              <div class="row justify-content-center">
+                <div class="col-lg-10">
+                  <div class="row row-cols-1 row-cols-sm-2 g-4">
+                    <!-- Mythen und Fakten -->
+                    <div class="col">
+                      <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                          <i
+                            class="bx bx-message-alt-check d-block fs-2 text-primary mb-3"
+                          ></i>
+                          <h3 class="h5 mb-3">Mythen &amp; Fakten</h3>
+
+                          <a
+                            href="/ai-myths-facts.html"
+                            class="stretched-link"
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Potenziale und Herausforderungen -->
+                    <div class="col">
+                      <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                          <i
+                            class="bx bx-analyse d-block fs-2 text-primary mb-3"
+                          ></i>
+                          <h3 class="h5 mb-3">
+                            Potenziale &amp; Herausforderungen
+                          </h3>
+
+                          <a
+                            href="/ai-potentials-challenges.html"
+                            class="stretched-link"
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Anwendungsbereiche -->
+                    <div class="col">
+                      <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                          <i
+                            class="bx bx-category d-block fs-2 text-primary mb-3"
+                          ></i>
+                          <h3 class="h5 mb-3">Anwendungsbereiche</h3>
+
+                          <a
+                            href="/ai-application-areas.html"
+                            class="stretched-link"
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Empfehlungen für die Praxis -->
+                    <div class="col">
+                      <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                          <i
+                            class="bx bx-bulb d-block fs-2 text-primary mb-3"
+                          ></i>
+                          <h3 class="h5 mb-3">Empfehlungen für die Praxis</h3>
+
+                          <a
+                            href="/ai-recommendations.html"
+                            class="stretched-link"
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Zitiervorschlag Section -->
+            <div class="card border-0 shadow-sm mb-4 p-4">
+              <div class="card-body p-0">
+                <p class="mb-0 fst-italic">
+                  Zitiervorschlag: Esther Brossmann-Handler, Susanne
+                  Sackl-Sharif, Sabine Klinger &amp; Andrea Mayr (28.02.2025).
+                  Künstliche Intelligenz in der Sozialen Arbeit.
+                  https://digitalesozialearbeit.github.io/ai-socialwork
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- KI Info Sidebar -->
+          <div class="col-lg-4">
+            <div class="sticky-top" style="top: 105px">
+              <!-- KI Details Card -->
+              <div class="card border-0 shadow-sm mb-4 bg-faded-warning">
+                <div class="card-body">
+                  <h3 class="h5 mb-4">KI: Was ist das?</h3>
+                  <div class="mb-4">
+                    <h4 class="h6 mb-2">Generativ vs. regelbasiert</h4>
+                    <div class="mb-3">
+                      <p class="fw-medium mb-1">Generative KI:</p>
+                      <p class="mb-0">
+                        kann eigenständig neue Inhalte erzeugen, z.B. Texte,
+                        Bilder oder Musik, basierend auf den Mustern und
+                        Informationen, die sie zuvor gelernt haben.
+                      </p>
+                    </div>
+                    <div>
+                      <p class="fw-medium mb-1">Regelbasierte KI:</p>
+                      <p class="mb-0">
+                        basiert auf einer festen Reihe von vorgegebenen Regeln
+                        und Logiken. Diese Systeme treffen Entscheidungen und
+                        führen Aufgaben aus, indem sie Schritt für Schritt
+                        diesen Regeln folgen.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <h4 class="h6 mb-2">KI-Tool vs. KI-System</h4>
+                    <div class="mb-3">
+                      <p class="fw-medium mb-1">KI-System:</p>
+                      <p class="mb-0">
+                        ist eine umfassende, maschinengestützte, mit
+                        unterschiedlichen Grad an Autonomie ausgestattete
+                        Einheit, die betrieben wird, um komplexe Aufgaben zu
+                        lösen. Es umfasst mehrere Komponenten wie
+                        Datenverarbeitung, Mustererkennung, Entscheidungsfindung
+                        und Lernen. Ein KI-System kann vielseitig einsetzbar
+                        sein und in verschiedenen Bereichen wie
+                        Gesundheitswesen, Finanzen oder Automobilindustrie
+                        verwendet werden.
+                      </p>
+                    </div>
+                    <div>
+                      <p class="fw-medium mb-1">KI-Tool:</p>
+                      <p class="mb-0">
+                        ist eine spezialisierte Anwendung oder Software, die auf
+                        bestimmten Aufgaben oder Funktionen fokussiert ist. Es
+                        wird entwickelt, um spezifische Probleme zu lösen oder
+                        bestimmte Prozesse zu unterstützen. Beispiele für
+                        KI-Tools sind Chatbots, Bilderkennungssoftware oder
+                        Anwendungen zur Spracherkennung.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (wird inkludiert)-->
+    <div data-include="footer.html"></div>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
