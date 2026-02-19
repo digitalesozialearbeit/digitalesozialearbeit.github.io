@@ -417,6 +417,17 @@ function initBackToTop() {
 }
 
 // Initialize on DOM ready
+// --- BACK-TO-MAIN PILL: hide on scroll ---
+function initBackToMain() {
+    const pill = document.querySelector('.back-to-main');
+    if (!pill) return;
+    let lastY = 0;
+    window.addEventListener('scroll', () => {
+        pill.classList.toggle('is-hidden', window.scrollY > 120);
+        lastY = window.scrollY;
+    }, { passive: true });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     initActionBarCollapse();
     updateScrollOffset();
@@ -424,4 +435,5 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavLinks();
     initVibeCheckBoxes();
     initBackToTop();
+    initBackToMain();
 });
