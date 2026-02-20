@@ -467,7 +467,7 @@ p + .source {
     border-radius: var(--radius);
     margin-bottom: 0.5rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.75rem;
 }
 .resource-list a {
@@ -484,10 +484,12 @@ p + .source {
     padding: 0.1rem 0.4rem;
     border-radius: 3px;
     letter-spacing: 0.02em;
-    vertical-align: middle;
     display: inline-block;
     min-width: 2.5rem;
     text-align: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin-top: 0.2rem;
 }
 
 /* EPIC Grid */
