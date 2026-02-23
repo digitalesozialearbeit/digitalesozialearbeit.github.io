@@ -27,6 +27,19 @@ Themen: Digitalisierung in der Sozialen Arbeit, KI, Gender & Diversität.
 - `orientierungsleitfaden.html` im Root ist nur ein **Redirect** auf `orientierungsleitfaden/`
 - URL: `/orientierungsleitfaden` → Redirect → `/orientierungsleitfaden/` → `orientierungsleitfaden/index.html`
 
+#### Card-Farbsystem (4 Farben)
+- `card-primary` (blaugrün) – Kerninhalt: Definitionen, Workflows, Anleitungen
+- `card-accent` (orange) – Praxis: Prompts, KI-Outputs, Szenarien
+- `card-muted` (grau) – Kontext: Hintergrundinfos, Tabellen, Zitiervorschlag
+- `card-danger` (rot) – Warnung: Rote Linien, Datenschutz-Stopp
+
+#### Zitierformat
+- **Inline-Quellen** (`<p class="source">`): `Nachname, V. (Jahr). Titel. *Journal*. DOI` – Punkt als Trenner, Journals in `<em>`
+- **Kap. 5 (Pro/Contra)**: Keine In-Text-Zitate im Fließtext, Quellen nur unten im `<p class="source">`
+- **Literaturverzeichnis** (`#literatur`): Alphabetisch sortiert, gleiches Format wie Inline-Quellen
+- **Weiterführende Literatur** (`resource-list`): Kurzformat als klickbare Links – bewusst vereinfacht
+- **Keine Gedankenstriche** (em dashes) im gesamten Leitfaden
+
 ## Neue Seite anlegen (regulär)
 1. HTML-Datei im Root erstellen (z.B. `neue-seite.html`)
 2. Boilerplate von bestehender Seite kopieren (z.B. `ai-socialwork.html`)
