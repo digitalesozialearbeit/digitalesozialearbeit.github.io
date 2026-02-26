@@ -305,7 +305,7 @@ h1 {
     color: var(--col-primary);
     background: var(--col-bg-alt);
     border: 1px solid var(--col-border);
-    border-radius: 1rem;
+    border-radius: var(--radius);
     text-decoration: none;
     transition: all 0.15s ease;
     white-space: nowrap;
