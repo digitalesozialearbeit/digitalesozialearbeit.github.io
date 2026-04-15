@@ -172,6 +172,20 @@ In diesem Guide erfährst du, wie du Inhalte auf der Website “Digitale Soziale
 
 ---
 
+## 📂 Orientierungsleitfaden
+
+Der Orientierungsleitfaden unter `/orientierungsleitfaden` ist eine **eigenständige Sub-App** mit eigenem Tech-Stack:
+
+- **Pfad**: `orientierungsleitfaden/index.html`
+- **Eigenes CSS**: `orientierungsleitfaden/style.css`
+- **Eigenes JS**: `orientierungsleitfaden/script.js`
+- **Eigene Bilder**: `orientierungsleitfaden/images/`
+- **Fonts**: Inter + Merriweather via bunny.net
+
+Der Leitfaden nutzt **kein Bootstrap und kein Silicon Theme** – er ist komplett unabhängig von der Hauptseite gestaltet. Die Datei `orientierungsleitfaden.html` im Root ist nur ein Redirect auf den Unterordner.
+
+---
+
 ## 🆘 Hilfe & Support
 
 1. [Bootstrap 5 Dokumentation](https://getbootstrap.com/docs/5.3)
